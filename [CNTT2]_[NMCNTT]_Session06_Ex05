@@ -1,0 +1,42 @@
+4. Yêu cầu đầu ra
+Phần 1: Thiết kế kiến trúc
+Xác định 4 khối cấu trúc của PowerShell Script (đối chiếu bảng ánh xạ ở mục 3):
+1.Header block — Thông tin script (tên, tác giả, ngày tạo dạng comment #)
+# auto_report.ps1
+# Tác giả: An
+# Ngày tạo: 14/10/2026
+# Mục tiêu: Tự động lọc lỗi 404 từ server.log và lưu báo cáo
+
+2.Biến cấu hình — Khai báo các đường dẫn tệp bằng biến $variable
+$duong_dan_log = "server.log"
+$bao_cao = "daily_report.txt"
+
+3.Thông báo tiến trình — Dùng Write-Host để báo trạng thái
+Write-Host "=== Bat dau xu ly log ==="
+Write-Host "Dang loc loi 404..."
+
+4.Logic xử lý — Đọc log (Get-Content) ➔ Lọc (Select-String) ➔ Ghi kết quả (>>)
+"=== HE THONG TU DONG LOC LOG ===" | Out-File -FilePath $bao_cao -Encoding utf8
+Get-Content $duong_dan_log | Select-String "404" | Out-File -FilePath $bao_cao -Append -Encoding utf8
+Write-Host "Hoan thanh! Bao cao da duoc luu vao $bao_cao"
+Phần 2: Sản phẩm
+Tệp mã nguồn .ps1 hoàn chỉnh thực hiện:
+Tạo tiêu đề mới ➔ Đọc file log ➔ Lọc lỗi qua Pipeline ➔ Lưu nối vào tệp báo cáo.
+# auto_report.ps1
+# Tác giả: An
+# Ngày tạo: 14/10/2026
+# Mục tiêu: Tự động lọc lỗi 404 từ server.log và lưu báo cáo
+# === Khối biến cấu hình ===
+$duong_dan_log = "server.log"
+$bao_cao = "daily_report.txt"
+# === Khối thông báo tiến trình ===
+Write-Host "=== Bat dau xu ly log ==="
+Write-Host "Dang loc loi 404..."
+# === Khối logic xử lý ===
+# Ghi tiêu đề vào file báo cáo (ghi đè để tạo mới mỗi ngày)
+"=== HE THONG TU DONG LOC LOG ===" | Out-File -FilePath $bao_cao -Encoding utf8
+# Lọc lỗi 404 từ log và ghi nối tiếp vào báo cáo
+Get-Content $duong_dan_log | Select-String "404" | Out-File -FilePath $bao_cao -Append -Encoding utf8
+# Thông báo hoàn tất
+Write-Host "Hoan thanh! Bao cao da duoc luu vao $bao_cao"
+
