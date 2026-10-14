@@ -1,0 +1,29 @@
+3. Yêu cầu đầu ra
+Phần 1: Phân tích (Auditing)
+Chỉ ra điểm cực kỳ nguy hiểm trong mã nguồn AI gợi ý, giải thích ý nghĩa từng tham số (-Path, -Recurse, -Force) và nêu rõ hậu quả nếu chạy đoạn script trên. Áp dụng đúng 3 Nguyên tắc "Vàng" thẩm định mã AI đã học
+Lệnh Remove-Item -Path "C:\*" sẽ xóa toàn bộ tệp và thư mục trong ổ C. Đây là ổ hệ thống, chứa Windows và toàn bộ dữ liệu.
+Phần 2: Triển khai (Safe Script)
+Viết lại tệp safe_cleanup.ps1 chỉ thực hiện:
+Di chuyển đến thư mục logs của dự án bằng Set-Location (lệnh chuyển thư mục trong PowerShell, tương đương cd).
+Lọc các dòng có chữ WARNING từ system.log ra tệp issues.txt bằng Select-String.
+Chỉ xóa các tệp .tmp bên trong thư mục dự án bằng Remove-Item có phạm vi giới hạn rõ ràng, áp dụng đúng Nguyên tắc "Khoanh vùng Đường dẫn"
+# safe_cleanup.ps1
+# Tác giả: Quản trị viên
+# Ngày tạo: 14/10/2026
+# Mục tiêu: Dọn dẹp an toàn các tệp .tmp trong thư mục dự án
+# Di chuyển đến thư mục logs của dự án
+Set-Location "C:\Project\logs"
+# Lọc các dòng WARNING từ system.log ra issues.txt
+Get-Content system.log | Select-String "WARNING" | Out-File -FilePath issues.txt -Encoding utf8
+# Xóa các tệp .tmp trong thư mục hiện tại (khoanh vùng rõ ràng)
+Remove-Item -Path ".\*.tmp" -Force
+Write-Host "Dọn dẹp an toàn hoàn tất!"
+Phần 3: Kiểm thử (Verify)
+Mô tả cách bạn kiểm tra kết quả trên PowerShell để xác nhận script đã chạy đúng và an toàn, dùng:
+
+Get-Content để xem nội dung tệp issues.txt vừa tạo
+     Get-Content issues.txt
+Get-ChildItem để liệt kê lại thư mục, xác nhận các tệp .tmp đã bị xóa
+     Get-ChildItem
+Test-Path (kiến thức mở rộng: đây là lệnh PowerShell dùng để kiểm tra nhanh xem một đường dẫn/tệp có còn tồn tại hay không, trả về kết quả True/False, ví dụ Test-Path issues.txt) để xác nhận tệp báo cáo đã được tạo thành công.
+    Test-Path issues.txt
