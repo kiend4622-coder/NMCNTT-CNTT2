@@ -1,0 +1,24 @@
+Phần 1: Phân tích các lỗi cú pháp
+Đoạn mã của bạn sinh viên mắc 3 lỗi cú pháp chính sau:
+1. Lỗi phân cấp tiêu đề
+ Mã lỗi ###phân loại rau
+ Nguyên nhân: Nhảy cấp trực tiếp từ ⁠#⁠ (H1) xuống ⁠###⁠ (H3) mà bỏ qua ⁠##⁠ (H2).
+ Hậu quả: Cấu trúc tài liệu bị phá vỡ, giao diện hiển thị cỡ chữ bị lệch chuẩn (đang rất to đột ngột thu nhỏ quá mức) và ảnh hưởng xấu tới SEO/chỉ mục tự động.
+2. Lỗi cú pháp chèn ảnh (Image Syntax & Space Error):
+ Mã lỗi:[Logo Dự án] ([https://greentech.vn/logo.png](https://greentech.vn/logo.png))⁠
+ Nguyên nhân:https://www.binance.com/vi/referral/tier-reward/vtier-r2/claim?ref=GRO_100030109_B9J25&utm_medium=web_share_copy
+ Thiếu dấu chấm cảm ⁠!⁠ ở đầu (dùng ⁠[...]()⁠ là cú pháp tạo đường link, không phải chèn ảnh).
+ Xuất hiện khoảng trắng thừa giữa dấu ngoặc vuông ⁠]⁠ và ngoặc đơn ⁠(⁠.
+ Hậu quả: Ảnh không hiển thị, Markdown chỉ coi đó là một đoạn văn bản/link bị lỗi cú pháp.
+3. Lỗi cú pháp in đậm (Bold Syntax):
+ Mã lỗi: ⁠*Rất quan trọng⁠
+ Nguyên nhân:
+ Chỉ dùng 1 dấu sao ⁠*⁠ (đây là cú pháp in nghiêng nếu đóng đủ câu).
+ Thiếu dấu sao đóng ở cuối câu.
+ Hậu quả: Trình soạn thảo không nhận diện được kiểu in đậm (cần dùng ⁠**⁠ ở cả 2 đầu), chữ sẽ hiển thị dưới dạng văn bản thường kèm dấu sao thừa.
+Phần 2: Mã Markdown hoàn thiện (Chuẩn cú pháp)
+Đoạn mã chuẩn đã được sửa lỗi phân cấp H1 \rightarrow H2, chèn ảnh đúng cú pháp và in đậm chuẩn quy tắc:
+# Lợi ích của rau sạch
+![Logo Dự án](https://greentech.vn/logo.png)
+## Danh sách các loại rau
+**Rất quan trọng**: Rau sạch giúp bảo vệ sức khỏe gia đình bạn.
