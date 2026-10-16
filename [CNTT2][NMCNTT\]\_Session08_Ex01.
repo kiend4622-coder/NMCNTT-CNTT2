@@ -18,3 +18,10 @@ Phần 1: Phân tích các lỗi cú pháp
  Hậu quả: Trình soạn thảo không nhận diện được kiểu in đậm (cần dùng ⁠**⁠ ở cả 2 đầu), chữ sẽ hiển thị dưới dạng văn bản thường kèm dấu sao thừa.
 Phần 2: Mã Markdown hoàn thiện (Chuẩn cú pháp)
 Đoạn mã chuẩn đã được sửa lỗi phân cấp H1 \rightarrow H2, chèn ảnh đúng cú pháp và in đậm chuẩn quy tắc:
+# Lợi ích của rau sạch
+
+![Logo Dự án](https://greentech.vn/logo.png)
+
+## Danh sách các loại rau
+
+**Rất quan trọng**: Rau sạch giúp bảo vệ sức khỏe gia đình bạn.
