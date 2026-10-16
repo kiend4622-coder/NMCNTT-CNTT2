@@ -1,0 +1,20 @@
+Vì sao Markdown giúp AI xử lý nhanh hơn?
+ Ít ký tự thừa: Markdown tốn rất ít ký tự định dạng (ví dụ in đậm: ⁠**từ**⁠ chỉ tốn 4 ký tự, trong khi HTML ⁠<strong>từ</strong>⁠ tốn 17 ký tự).
+ Tiết kiệm Token: Giảm số Token đầu vào/đầu ra giúp AI giảm thời gian tính toán (độ trễ thấp) và tiết kiệm chi phí API.
+Phần 2. So sánh & Đề xuất giải pháp
+SO SÁNH MARKDOWN VÀ HTML:
+1. Cú pháp định dạng:
+ Markdown: Ngắn gọn (Ví dụ: ⁠**đậm**⁠, ⁠# Tiêu đề⁠)
+ HTML: Dài dòng (Ví dụ: ⁠<strong>đậm</strong>⁠, ⁠<h1>Tiêu đề</h1>⁠)
+2. Số lượng Token:
+ Markdown: Rất ít 
+ HTML: Nhiều (Chứa nhiều thẻ đóng/mở ⁠<>⁠)
+3. Độ dễ đọc
+ Markdown: Cao (Rõ ràng, không bị nhiễu bởi mã)
+ HTML: Thấp 
+4. Tốc độ & Chi phí:
+ Markdown: Nhanh & Tiết kiệm
+ HTML: Chậm & Tốn kém
+GIẢI PHÁP TỐI ƯU CHO HỆ THỐNG "GREENTECH":
+ Mô hình Hybrid: AI sinh dữ liệu dạng Markdown (Backend) -> Ứng dụng tự render thành giao diện đẹp cho nông dân (Frontend).
+ Lý do: Giảm 30–50% chi phí Token, phản hồi cực nhanh cho nông dân ở nơi mạng yếu, và văn bản vẫn dễ đọc ngay cả khi ứng dụng gặp lỗi không hiển thị được giao diện.
