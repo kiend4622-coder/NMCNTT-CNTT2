@@ -1,0 +1,57 @@
+Phần 1 – Phân tích lỗi
+
+Hàng đầu tiên không phải tên cột (vi phạm Quy tắc 1)
+
+Ô A1–E1 chứa tiêu đề “DANH SÁCH BÁO CÁO VIÊN — HỘI NGHỊ KHKH 2026” thay vì header chuẩn.
+
+Hậu quả: AutoFilter không nhận diện đúng vùng dữ liệu, dẫn đến lọc sai.
+
+Có hàng trống giữa dữ liệu (vi phạm Quy tắc 4)
+
+Giữa dòng 2 và dòng 3 có hàng trống, khiến Filter coi bảng bị ngắt.
+
+Hậu quả: chỉ lọc được một phần dữ liệu, kết quả trả về ít hơn dự kiến.
+
+Một hàng không phải bản ghi (vi phạm Quy tắc 2)
+
+Dòng “TỔNG SỐ CNTT: 45” nằm xen giữa dữ liệu.
+
+Hậu quả: AutoFilter coi đây là một bản ghi, làm sai lệch kết quả lọc.
+
+Merge Cell ở tiêu đề (vi phạm Quy tắc 1)
+
+Hàng tiêu đề bị gộp ô, không khớp với cấu trúc cột.
+
+Hậu quả: AutoFilter không thể áp dụng chính xác cho từng cột.
+
+Khoảng trắng vô hình trong dữ liệu (vi phạm Quy tắc 3)
+
+Ô B3 chứa “Trần Thị Bình␣” (có khoảng trắng cuối).
+
+Hậu quả: Filter so sánh chuỗi ký tự theo từng byte, nên “Trần Thị Bình” ≠ “Trần Thị Bình␣”. Kết quả lọc không khớp dù nhìn bằng mắt thường giống nhau
+Phần 2 – Sửa lỗi & Nghiệm thu
+
+Cấu trúc bảng chuẩn
+STT | Họ và Tên       | Khoa/Viện | Điểm Xét Duyệt | Trạng Thái
+---------------------------------------------------------------
+1   | Nguyễn Văn An   | CNTT      | 8.5            | Đã duyệt
+2   | Trần Thị Bình   | CNTT      | 7.9            | Chờ duyệt
+3   | Lê Minh Châu    | Điện tử   | 8.2            | Đã duyệt
+
+Làm sạch dữ liệu bằng TRIM
+
+_Thêm cột phụ: =TRIM(B2) (giả sử cột B là “Họ và Tên”).
+
+Copy kết quả → Paste Values đè lên cột gốc.
+
+Nhờ TRIM, loại bỏ khoảng trắng thừa ở đầu/cuối chuỗi.
+
+Thao tác lọc đúng
+
+Bật AutoFilter bằng Ctrl+Shift+L.
+
+Chọn cột Khoa/Viện → Filter = “CNTT”.
+
+Chọn cột Điểm Xét Duyệt → Filter ≥ 8.0.
+
+Kết quả: danh sách ~35 báo cáo viên CNTT có điểm xét duyệt ≥ 8.0 hiển thị chính xác.
