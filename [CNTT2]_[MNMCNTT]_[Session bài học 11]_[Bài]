@@ -1,0 +1,53 @@
+Phần 1 – Phân tích bài toán (I/O)
+| Lookup_value (giá trị tra cứu) | Table_array (vùng tra cứu) | Col_index_num | Cột cần điền |
+| --- | --- | --- | --- |
+| Mã tác giả ở cột C (Sheet DanhSachBaoCao) | ``DanhMucTacGia!$A$2:$E$100`` | 2 | Tên Tác Giả (cột D) |
+| Mã tác giả ở cột C | ``DanhMucTacGia!$A$2:$E$100`` | 4 | Phòng trình bày (cột E) |
+| Mã tác giả ở cột C | ``DanhMucTacGia!$A$2:$E$100`` | 5 | Thù lao (cột F) |\
+Chiến lược xử lý 3 bẫy dữ liệu
+
+1 Khoảng trắng thừa → dùng TRIM() bọc quanh lookup_value.
+
+2 Tác giả chưa có trong danh mục → dùng IFERROR(...,"Chưa cập nhật").
+
+3 Vùng tra cứu bị trôi khi kéo công thức → cố định bằng $ trong Table_array.
+
+Các bước thực hiện
+
+Xác định cột chứa Mã TG trong Sheet DanhSachBaoCao.
+
+1 Viết công thức VLOOKUP với TRIM và IFERROR.
+
+2 Cố định vùng tra cứu bằng $.
+
+3 Điền công thức cho ô đầu tiên, sau đó kéo xuống toàn bộ danh sách.
+
+4 Lặp lại cho các cột cần điền (D, E, F) chỉ thay đổi Col_index_num.
+
+Phần 2 – Triển khai & Chống lỗi
+
+Công thức ô D2 (Tên Tác Giả):
+
+excel
+=IFERROR(VLOOKUP(TRIM(C2),DanhMucTacGia!$A$2:$E$100,2,FALSE),"Chưa cập nhật")
+Công thức ô E2 (Phòng):
+
+excel
+=IFERROR(VLOOKUP(TRIM(C2),DanhMucTacGia!$A$2:$E$100,4,FALSE),"Chưa cập nhật")
+Công thức ô F2 (Thù lao):
+
+excel
+=IFERROR(VLOOKUP(TRIM(C2),DanhMucTacGia!$A$2:$E$100,5,FALSE),"Chưa cập nhật")
+Chỉ cần thay đổi Col_index_num (2 → 4 → 5) vì cấu trúc bảng tra cứu giữ nguyên, không cần viết lại toàn bộ cú pháp.
+
+Hiện tượng khi bỏ $:
+
+Nếu công thức ở D2 là:
+
+excel
+=IFERROR(VLOOKUP(TRIM(C2),DanhMucTacGia!A2:E100,2,FALSE),"Chưa cập nhật")
+Khi kéo xuống D3, vùng tra cứu thành DanhMucTacGia!A3:E101.
+
+Kéo xuống D5, vùng tra cứu thành DanhMucTacGia!A5:E103.
+
+Kết quả: bảng tra cứu bị “trôi” theo từng dòng, dẫn đến lỗi hoặc sai dữ liệu.
