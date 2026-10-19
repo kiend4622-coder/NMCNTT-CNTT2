@@ -1,0 +1,26 @@
+Phần 1 – Phân tích  
+Bảng Excel của Nam vi phạm nhiều “Quy tắc Vàng” trong tư duy Database:
+
+-Không để trống hàng/cột trong vùng dữ liệu → Hàng trống làm AutoFilter bị ngắt giữa bảng.
+
+-Không Merge Cell ở tiêu đề → Merge khiến Excel không nhận diện đúng cột để lọc.
+
+-Dữ liệu phải sạch, không chứa khoảng trắng thừa → Khoảng trắng vô hình tạo ra giá trị khác nhau (“hỏng” ≠ “hỏng ”).
+
+-Một ô = một giá trị → Việc gộp hoặc nhập lẫn nhiều thông tin trong một ô phá vỡ nguyên tắc chuẩn hóa.
+
+Phần 2 – Hoàn thiện
+
+-Gỡ Merge Cell: Chọn hàng tiêu đề → Home → Merge & Center → Unmerge Cells.
+
+-Xóa hàng trống: Chọn toàn bộ bảng → Find & Select → Go To Special → Blanks → Delete Rows.
+
+-Làm sạch dữ liệu bằng TRIM:
+
+Thêm cột phụ: =TRIM(A2) (giả sử cột A là “Trạng thái”).
+
+Copy kết quả → Paste Values đè lên cột gốc.
+
+Nhờ TRIM, các giá trị “hỏng” sẽ đồng nhất, không còn khoảng trắng vô hình.
+
+-Bật lại AutoFilter: Chọn bảng → nhấn Ctrl+Shift+L.
