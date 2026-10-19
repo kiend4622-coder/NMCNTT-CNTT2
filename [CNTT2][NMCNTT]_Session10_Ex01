@@ -1,0 +1,15 @@
+Phần 1 – Phân tích  
+Nam gặp lỗi vì chỉ phóng to chữ và in đậm thủ công thay vì dùng Heading Styles. Word chỉ nhận các đoạn gán nhãn Heading 1, Heading 2… để tạo mục lục tự động. Do đó, bảng mục lục báo “No table of contents entries found”.
+Sai lầm khác là Nam gán cả đoạn văn dài 5 trang dưới Heading 1, khiến mục lục hiển thị nguyên đoạn văn thay vì chỉ tiêu đề.
+
+Phần 2 – Sửa lỗi
+
+Chọn tiêu đề chính như “1. Giới thiệu” → gán Heading 1.
+
+Chọn tiêu đề cấp dưới như “2. Yêu cầu chức năng” → gán Heading 2.
+
+Đoạn văn dài bị gán Heading 1 → đổi lại về Normal.
+
+Vào References → Table of Contents → Automatic Table để chèn lại mục lục.
+
+Khi thêm nội dung mới, bấm chuột phải vào mục lục → Update Field → Update entire table để cập nhật số trang.
