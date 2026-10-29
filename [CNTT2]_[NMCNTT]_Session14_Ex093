@@ -1,0 +1,48 @@
+5. Yêu cầu đầu ra
+
+Phần 1: Phân tích bài toán (I/O)
+
+1. Xác định rõ: Đầu vào (các cấp độ tài liệu cần quản lý, các vai trò người dùng) và Đầu ra mong đợi (cấu trúc thư mục và bảng phân quyền hoàn chỉnh). Trình bày ngắn gọn bằng gạch đầu dòng.
+Đầu vào:
+Ban Kỹ thuật
+Ban Thiết kế
+Ban Kinh doanh
+Nhà đầu tư
+Source Code, Design, Business Plan, Slide Pitch, API Keys
+Đầu ra:
+Cấu trúc thư mục Google Drive
+Bảng phân quyền theo Least Privilege
+Tài liệu được bảo mật và lưu lịch sử phiên bản
+2. Đề xuất giải pháp: Mô tả ngắn gọn cấu trúc thư mục Google Drive 2 cấp (cấp dự án / cấp ban nhóm) mà bạn dự định thiết kế. Nêu rõ thư mục nào chứa loại tài liệu gì.
+CampusPay/
+├── Technical/
+├── Design/
+├── Business/
+└── Shared/
+3. Thiết kế các bước: Gạch đầu dòng tuần tự các bước lập cấu hình hệ thống từ đầu (tạo thư mục → đặt tên → cấp quyền → kiểm tra → thu hồi/cập nhật).
+1 Tạo thư mục.
+2 Phân chia theo ban.
+3 Cấp quyền Viewer/Commenter/Editor.
+4 Đặt tài liệu nhạy cảm là Restricted.
+5 Kiểm tra quyền truy cập.
+6 Cập nhật hoặc thu hồi khi có thay đổi.
+Phần 2: Triển khai & Chống lỗi
+
+4. Viết bảng phân quyền hoàn chỉnh cho 4 vai trò x 5 loại tài liệu chính. Sử dụng định dạng bảng 6 cột: Loại tài liệu | Ban KT | Ban TK | Ban KD | Nhà đầu tư | Ghi chú bảo mật.
+Loại tài liệu     | Ban KT    | Ban TK     | Ban KD    | Nhà đầu tư | Ghi chú
+------------------|-----------|------------|------------|------------|-------------------------
+Source Code       | Editor    | No Access  | Viewer     | No Access  | Chỉ KT được sửa
+API Keys          | Editor    | No Access  | No Access  | No Access  | Restricted
+Design Assets     | Viewer    | Editor     | Viewer     | No Access  | TK quản lý
+Business Plan     | Viewer    | No Access  | Editor     | Viewer     | Chỉ KD được sửa
+Slide Pitch       | Commenter | Commenter  | Editor     | Viewer     | Chia sẻ nhiều ban
+5. Trả lời 3 bẫy dữ liệu trong phần ràng buộc: Nêu cụ thể quyền sẽ cấp, có nên bật/tắt tính năng nào thêm không, giải thích lý do.
+Bẫy 1: KT xem Business Plan nhưng không được sửa
+ → Cấp quyền Viewer (hoặc Commenter nếu cần góp ý).
+
+Bẫy 2: Nhà đầu tư tải PDF Pitch Deck
+ → Cấp Viewer.
+ → Không cần tắt "Viewers can download" vì họ cần tải file offline.
+
+Bẫy 3: Thành viên nghỉ việc
+ → Xóa tài khoản khỏi Google Drive/Shared Folder và thu hồi toàn bộ quyền truy cập ngay lập tức.
