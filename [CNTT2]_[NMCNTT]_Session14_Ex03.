@@ -1,0 +1,36 @@
+5. Yêu cầu đầu ra
+
+Báo cáo phân tích (I/O): Mô tả luồng dữ liệu từ lúc nhấn Ctrl+S đến khi xuất hiện tích xanh trên file.
+1. Báo cáo phân tích (I/O)
+Plain Text
+Ctrl + S
+↓
+File được lưu vào SSD Local
+↓
+OneDrive phát hiện file thay đổi
+↓
+File được tải lên Cloud
+↓
+Cloud xác nhận đồng bộ thành công
+↓
+Xuất hiện dấu tích xanh (✔)
+Thiết kế: Sơ đồ tổ chức thư mục Cloud chuẩn cho một lập trình viên (bao gồm phân loại: Code, Docs, Assets).
+Thiết kế thư mục Cloud cho lập trình viên
+Plain Text
+OneDrive/
+│
+├── Code/
+│ ├── StartupProject/
+│ └── PersonalProject/
+│
+├── Docs/
+│ ├── Requirements/
+│ ├── Design/
+│ └── Reports/
+│
+├── Assets/
+│ ├── Images/
+│ ├── Icons/
+│ └── Videos/
+│
+└── Archive/
