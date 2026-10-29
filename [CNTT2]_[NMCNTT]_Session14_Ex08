@@ -1,0 +1,31 @@
+
+5. Yêu cầu đầu ra
+
+Phần 1: Phân tích lỗ hổng
+
+1. Xem xét từng dòng trong bảng log. Xác định chính xác dòng nào (hoặc các dòng nào) là nguồn gốc trực tiếp gây rò rỉ dữ liệu khách hàng. Giải thích kỹ thuật: tổ hợp quyền + phạm vi nào đã tạo ra lỗ hổng bảo mật, và cơ chế rò rỉ xảy ra như thế nào.
+
+08:15 T2 - campuspay_beta_users.xlsx - Editor - Anyone with the link
+
+Lý do:
+
+File chứa dữ liệu khách hàng.
+Editor cho phép xem, sửa và chia sẻ tiếp.
+Anyone with the link cho phép bất kỳ ai có link đều truy cập được.
+
+=> Đây là lỗ hổng trực tiếp gây rò rỉ dữ liệu.
+2. Dòng log cuối (10:00 T3) cho thấy một 'Email người lạ' đã truy cập campuspay_api_keys.txt. Nhưng theo dòng log thứ 2, file này được set là Restricted cho email B. Vậy người lạ có thể vào bằng cách nào? Nêu 3 giả thuyết có thể xảy ra.
+_ 3 giả thuyết người lạ truy cập campuspay_api_keys.txt
+1. Tài khoản Email B bị lộ hoặc bị xâm nhập.
+2. Email B tải file xuống và gửi cho người khác.
+3. Có người đã cấp thêm quyền hoặc tạo link chia sẻ mới ngoài log được cung cấp.
+Phần 2: Sửa lỗi & Nghiệm thu
+
+3. Viết lại bảng cấu hình quyền chia sẻ đúng chuẩn cho từng file trong bảng log. Sử dụng 3 cột: Tên file | Quyền đúng | Phạm vi đúng. Giải thích ngắn gọn tại sao chọn quyền đó cho mỗi file.
+campuspay_beta_users.xlsx → Viewer | Restricted (chứa dữ liệu khách hàng, chỉ người được cấp quyền mới xem được).
+campuspay_api_keys.txt → Viewer | Restricted (chứa API Keys, cần bảo mật cao).
+slide_pitch_v8.pptx → Commenter | Restricted (cho phép góp ý nhưng không chỉnh sửa nội dung).
+4. Bẫy dữ liệu: Sau sự cố, trưởng nhóm muốn đảm bảo tất cả các link cũ đã chia sẻ đều vô hiệu hóa. Tính năng nào trong Google Drive giúp thực hiện điều này nhanh nhất? Nếu có tính năng 'Set Expiration Date', khi nào nên dùng nó thay vì thu hồi quyền thủ công?
+Nhanh nhất: đổi quyền từ Anyone with the link sang Restricted.
+Set Expiration Date dùng khi muốn cấp quyền truy cập tạm thời và tự động hết hạn sau một thời gian nhất định.
+
