@@ -1,0 +1,16 @@
+4. Yêu cầu đầu ra
+
+Phần 1 (Phân tích): Chỉ ra ít nhất 3 hậu quả của "Thảm họa dữ liệu truyền thống" mà Nam đang gặp phải.
+3 hậu quả của  "Thảm họa dữ liệu truyền thống" mà nam gặp phải là
+1.Mất dữ liệu do ghi đè 
+2.Xung đột phiên bản
+3.Khó cộng tác trong nhóm
+4.Rủi ro mất toàn bộ dự án
+
+Phần 2 (Sửa lỗi): Đề xuất quy trình thiết lập Hybrid Workflow cho Nam để từ nay về sau Nam có thể dùng Version History khôi phục code chỉ trong 1-click.
+_Đề xuất Hybrid Workflow 
+1. Lưu toàn bộ mã nguồn trong thư mục OneDrive thay vì chỉ lưu trên ổ D.
+2. Chia sẻ thư mục cho các thành viên để cùng làm việc trên một nguồn dữ liệu.
+3. Tiếp tục code trên máy cá nhân như bình thường, OneDrive sẽ tự động đồng bộ lên Cloud.
+4. Khi lỡ xóa hoặc sửa sai file, sử dụng Version History của OneDrive để khôi phục phiên bản trước chỉ với 1 click.
+5. Đồng thời đẩy mã nguồn lên GitHub để quản lý lịch sử thay đổi và làm việc nhóm hiệu quả hơn.
