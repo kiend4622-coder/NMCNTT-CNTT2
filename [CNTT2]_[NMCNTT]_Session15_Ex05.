@@ -1,0 +1,12 @@
+4. Yêu cầu đầu ra
+
+Thiết kế tin nhắn mẫu: Viết 1 tin nhắn yêu cầu hỗ trợ fix bug theo phong cách Asynchronous Communication (đầy đủ ngữ cảnh, không cần hỏi lại).
+
+Chào mọi người, module đăng ký xe đang lỗi không lưu dữ liệu. Em đã kiểm tra API và gửi log bên dưới. Nhờ mọi người hỗ trợ kiểm tra backend, phản hồi trước 17h ngày mai nếu có thể. Cảm ơn ạ.
+
+Lịch trình gửi tin: Sử dụng tính năng Schedule Send để lập lịch thông báo sao cho không làm phiền đồng đội vào lúc họ đang ngủ.
+Hà Nội: gửi lúc 9:00 sáng.
+Nhật Bản: nhận lúc 11:00 trưa.
+Mỹ: hẹn gửi 8:00 sáng theo giờ địa phương.
+
+Dùng Schedule Send để gửi trong giờ làm việc, tránh làm phiền khi đồng đội đang ngủ.
