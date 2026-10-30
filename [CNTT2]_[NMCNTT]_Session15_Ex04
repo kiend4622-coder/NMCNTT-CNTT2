@@ -1,0 +1,18 @@
+4. Yêu cầu đầu ra
+
+Giải pháp kỹ thuật: Mô tả cách thiết lập tính năng Files On-Demand để chỉ tải file xuống khi cần mở thực tế.
+
+Bật Files On-Demand để file chỉ nằm trên Cloud và chỉ tải về khi cần mở.
+Sau khi dùng xong chọn Free up space để giải phóng SSD.
+Upload video vào ban đêm, giới hạn tốc độ tải lên để tránh nghẽn mạng.
+Nếu mất mạng hoặc gập máy, hệ thống sẽ tiếp tục đồng bộ khi kết nối lại.
+
+Báo cáo dung lượng: Tính toán và chứng minh tính hiệu quả của giải pháp khi dung lượng Cloud lớn hơn dung lượng Local SSD nhiều lần.
+
+Dữ liệu video: 500GB
+SSD laptop: 256GB
+Nếu tải toàn bộ về máy → không đủ dung lượng.
+Khi dùng Files On-Demand:
+500GB lưu trên Cloud.
+Máy chỉ lưu file đang sử dụng (ví dụ 20GB).
+Tiết kiệm khoảng 480GB dung lượng SSD.
