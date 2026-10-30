@@ -1,0 +1,31 @@
+5. Yêu cầu đầu ra
+
+Bản đặc tả không gian cộng tác: README mô tả cấu trúc Folder, cấu trúc Channel và quy định phân quyền của dự án.
+README - Dự án Green-Tech
+
+Cấu trúc Folder
+
+/sensors: Code cảm biến.
+/reports: Báo cáo nhà đầu tư.
+/docs: Tài liệu dự án.
+.env: Chỉ Dev Lead được truy cập.
+
+Cấu trúc Channel
+
+#announcements: Thông báo.
+#technical: Thảo luận kỹ thuật.
+#tasks: Công việc, deadline.
+#bugs: Báo lỗi cảm biến.
+
+Phân quyền
+
+Dev Team: Editor.
+Nhà đầu tư: Viewer.
+Đối tác thiết bị: Commenter.
+Dùng Transfer Ownership khi bàn giao dự án.
+
+Kiểm thử: Giả định một thành viên lỡ tay xóa sạch folder sensors, hãy trình bày quy trình khôi phục nhanh nhất.
+Nếu xóa nhầm folder /sensors:
+1 Vào Recycle Bin/Trash.
+2 Restore thư mục.
+3 Đồng bộ lại dữ liệu.
