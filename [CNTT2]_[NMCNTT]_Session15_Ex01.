@@ -1,0 +1,18 @@
+BÀI 1
+
+1. Vấn đề là?
+
+Bạn A làm dự án và chỉ lưu dữ liệu trên Local Storage (SSD). Khi ổ cứng bị lỗi (Bad Sector) hoặc hỏng hóc, dữ liệu có nguy cơ bị mất vì không có bản sao lưu trên Cloud.
+
+2. Yêu cầu là?
+Phân tích luồng dữ liệu từ SSD lên Cloud.
+Đề xuất 3 bước thiết lập đồng bộ dữ liệu lên Cloud.
+Sử dụng Version History để khôi phục các phiên bản cũ khi cần.
+3. Cách làm?
+Luồng dữ liệu từ SSD lên Cloud
+SSD --> GG DRIVE FOR DEKTOP(ADD FOLDER ---> SYNC WITH GG DRIVE) 
+
+3 bước thiết lập đồng bộ dữ liệu lên Cloud
+1 Cài đặt và đăng nhập GG DRIVE
+2 Lưu toàn bộ file dự án vào SYNC
+3 Kiểm tra trạng thái đồng bộ 
