@@ -1,0 +1,15 @@
+5. Yêu cầu đầu ra
+
+Sơ đồ kiến trúc kênh: Danh sách các Channel cần có và quy định nội dung cho từng kênh.
+#announcements: Thông báo, deadline, lịch họp.
+#technical: Thảo luận kỹ thuật về cảm biến, phần mềm.
+#tasks: Giao việc và cập nhật tiến độ.
+#bugs: Báo lỗi và xử lý lỗi.
+#general: Trao đổi chung.
+#fun-memes: Giải trí, meme.
+
+Bản quy ước giao tiếp: 3 quy tắc vàng để tránh No-Hello Trap và spam @all.
+
+Quy tắc 1: Không nhắn "Hello", "Có đó không?" rồi chờ trả lời. Hãy nêu thẳng vấn đề.
+Quy tắc 2: Không spam @all. Chỉ dùng khi có thông báo quan trọng cho cả nhóm.
+Quy tắc 3: Luôn trả lời trong Thread để giữ chat gọn gàng.
