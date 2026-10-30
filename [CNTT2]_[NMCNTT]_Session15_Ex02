@@ -1,0 +1,30 @@
+
+5. Yêu cầu đầu ra
+
+Bản thiết kế phân quyền: Bảng phân loại đối tượng tương ứng với các mức quyền truy cập an toàn nhất.
+Bản thiết kế phân quyền
+
+Trưởng phòng HR: Editor 
+Nhân viên HR: Editor 
+Trưởng bộ phận: Commenter
+Ban Giám đốc: Viewer
+Ứng viên và người ngoài công ty: Không cấp quyền.
+
+Áp dụng Quy tắc Cờ Đỏ Bảo mật: Chỉ cấp quyền tối thiểu cần thiết cho từng đối tượng.
+Bước 1: Thu hồi quyền ngay lập tức
+
+-Xóa quyền Editor của ứng viên.
+-Hủy liên kết chia sẻ cũ.
+-Tạo liên kết mới với quyền phù hợp.
+
+Bước 2: Kiểm tra Access Audit Lo
+-Xác định ai đã truy cập file.
+-Kiểm tra thời gian truy cập.
+-Kiểm tra xem file đã bị xem, chỉnh sửa hoặc tải xuống chưa.
+
+Bước 3: Khắc phục và phòng ngừa
+-Thiết lập lại quyền theo nguyên tắc Least Privilege.
+-Chuyển trưởng bộ phận sang quyền Commenter.
+-Bật Suggesting Mode.
+-Rà soát quyền truy cập định kỳ.
+
