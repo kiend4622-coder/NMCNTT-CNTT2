@@ -1,0 +1,25 @@
+5. Yêu cầu đầu ra
+
+Phần 1: Báo cáo phân tích (I/O)
+
+Phác thảo sơ đồ Box Model hiện tại của phần tử bị lỗi qua việc soi thực tế.
+
+Dùng F12 → Elements → Computed để kiểm tra Box Model của hai khung.
+Xác định 4 thành phần:
+Content: vùng chứa nội dung.
+Padding: khoảng cách từ nội dung đến viền.
+Border: đường viền.
+Margin: khoảng cách giữa các phần tử.
+Nguyên nhân lỗi: Padding hoặc Margin thiết lập chưa hợp lý làm khung "Nội dung bài học" chồng lên "Danh sách video".
+Phần 2: Thiết kế giải pháp
+
+Đề xuất các thông số thay đổi tại bảng Styles để tách biệt hai khung nội dung mà không làm vỡ tổng thể trang web.
+.lesson-content{
+    padding: 15px;
+    margin-right: 20px;
+}
+
+.container{
+    display: flex;
+    gap: 20px;
+}
