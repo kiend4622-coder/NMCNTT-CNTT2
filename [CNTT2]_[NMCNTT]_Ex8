@@ -1,0 +1,36 @@
+5. Yêu cầu đầu ra
+
+Phần 1: Phân tích lỗ hổng & nguyên nhân
+
+1. Tại sao mặc dù Server đã cập nhật file danh mục thuốc mới nhưng trình duyệt của bác sĩ vẫn hiển thị dữ liệu cũ? Giải thích cơ chế Browser Cache đang hoạt động trong tình huống này.
+_Trình duyệt đang sử dụng Browser Cache (from disk cache, from memory cache) nên lấy file đã lưu trong máy thay vì tải bản mới từ Server. Vì vậy bác sĩ vẫn thấy danh mục thuốc cũ.
+2. Nếu một hacker nhúng được mã JavaScript độc hại vào trang web, hacker có thể đánh cắp chuỗi Token phiên đăng nhập carepulse_doctor_session bằng câu lệnh nào? Thiếu cờ HttpOnly và Secure sẽ gây ra hiểm họa Session Hijacking ra sao đối với hồ sơ bệnh án?
+
+ Hacker có thể đọc Cookie bằng document.cookie
+
+- Thiếu HttpOnly: JavaScript đọc được Cookie.
+- Thiếu Secure: Cookie có thể bị đánh cắp qua kết nối HTTP không mã hóa.
+- Hậu quả: Hacker lấy Session Token, đăng nhập giả mạo bác sĩ và truy cập hồ sơ bệnh án.
+
+Phần 2: Hoàn thiện giải pháp & Thao tác DevTools
+
+3. Hướng dẫn bác sĩ thực hiện thao tác làm mới cưỡng bức (Hard Reload) bằng phím tắt để cập nhật danh mục thuốc ngay lập tức mà không cần xóa toàn bộ lịch sử duyệt web.
+
+Ctrl + Shift + R
+hoặc
+Ctrl + F5
+để tải lại toàn bộ dữ liệu mới từ Server mà không cần xóa lịch sử duyệt web.
+
+4. Viết lại dòng lệnh phản hồi Set-Cookie chuẩn an ninh y tế, bổ sung đầy đủ các cờ bảo mật bắt buộc.
+Set-Cookie: carepulse_doctor_session=TOKEN_XYZ883921983;
+Domain=carepulse.vn;
+Path=/;
+Expires=Wed, 21 Oct 2026 07:00:00 GMT;
+HttpOnly;
+Secure;
+SameSite=Strict
+
+5. Nêu 3 bước kiểm tra Cookie và vô hiệu hóa Cache tạm thời trên Chrome DevTools F12 (Tab Application & Network).
+1. Nhấn F12 mở DevTools.
+2. Vào Application → Cookies để kiểm tra HttpOnly, Secure, SameSite.
+3. Vào Network → tích Disable Cache → tải lại trang (Ctrl + Shift + R).
