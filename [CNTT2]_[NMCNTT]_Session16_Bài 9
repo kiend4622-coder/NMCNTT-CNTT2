@@ -1,0 +1,64 @@
+4. Yêu cầu đầu ra
+
+Phần 1: Báo cáo phân tích kiến trúc đa Profile
+
+1. Phân tích nguyên nhân sâu xa dẫn đến hiện tượng 'văng phiên đăng nhập' (Session Conflict) dưới góc độ lưu trữ Cookies trong thư mục User Data khi dùng chung 1 Profile.
+_Nhiều người dùng chung 1 Chrome Profile nên dùng chung Cookies, Session, History. Khi đăng nhập tài khoản khác, cookie bị thay đổi làm hệ thống tự đăng xuất phiên hiện tại.
+
+2. Thiết kế Mô hình 3 Profile chuyên dụng cho máy tính trạm khám CarePulse. Với mỗi Profile, nêu rõ: Tên Profile, Mục đích sử dụng, Màu Theme nhận diện thị giác, và các loại dữ liệu được lưu trữ độc lập (Cookies, History, Bookmarks, Extensions).
+Google Chrome
+│
+├──  Work
+│   ├─ CarePulse
+│   ├─ BHYT
+│   ├─ Hồ sơ bệnh án
+│   └─ Cookies, History, Bookmarks riêng
+│
+├──  Personal
+│   ├─ Facebook
+│   ├─ Gmail cá nhân
+│   ├─ Shopee
+│   └─ Cookies, History, Bookmarks riêng
+│
+└──  Sandbox/Test
+    ├─ PTIT LMS
+    ├─ GitHub
+    ├─ Tài khoản thực tập sinh
+    └─ Cookies, History, Bookmarks riêng
+Phần 2: Thiết kế hệ thống Bookmark & Quy trình an toàn
+
+3. Dựng cây thư mục Bookmark chuẩn (Ctrl + Shift + O) gồm 3 thư mục chính phục vụ bác sĩ trực: 📁 01_CarePulse_Clinic, 📁 02_Pharma_Portal, 📁 03_Medical_Tools. Liệt kê ít nhất 3 dịch vụ web cần lưu trong mỗi thư mục.
+ 01_CarePulse_Clinic
+ ├─ CarePulse HIS
+ ├─ Cổng BHYT
+ └─ Hồ sơ bệnh án
+
+02_Pharma_Portal
+ ├─ Dược thư Quốc gia
+ ├─ DrugBank
+ └─ Medscape
+
+ 03_Medical_Tools
+ ├─ Google Dịch
+ ├─ BMI Calculator
+ └─ Chuyển đổi đơn vị y khoa
+4. Hướng dẫn áp dụng mẹo Favicon-Only cho 4 trang web dùng hàng ngày (CarePulse, Cổng BHYT, Dược thư, Google Dịch) để tiết kiệm diện tích thanh công cụ gấp 3 lần.
+Chuột phải Bookmark → Edit → xóa tên, giữ URL.
+
+Áp dụng cho:
+
+CarePulse
+Cổng BHYT
+Dược thư
+Google Dịch
+
+=> Tiết kiệm nhiều diện tích thanh Bookmark.
+5. Xử lý Bẫy an ninh: Khi có đoàn thanh tra hoặc khách mượn máy tính kiểm tra trong 30 phút, nhân viên phòng khám phải kích hoạt chế độ duyệt web nào (Guest Profile hay Incognito)? Giải thích lý do và cảnh báo nguy cơ nếu bật tính năng Cloud Sync tài khoản cá nhân trên máy trạm y tế này.
+Nên dùng Guest Profile khi khách hoặc đoàn thanh tra mượn máy.
+
+Lý do:
+
+Không truy cập được mật khẩu, lịch sử, bookmark của chủ máy.
+Dữ liệu tự xóa khi đóng phiên.
+
+Không nên bật Cloud Sync cá nhân trên máy trạm vì có nguy cơ lộ mật khẩu, lịch sử và dữ liệu bệnh nhân.
