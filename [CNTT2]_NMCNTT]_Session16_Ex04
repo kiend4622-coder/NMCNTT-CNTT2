@@ -1,0 +1,35 @@
+4. Yêu cầu đầu ra
+Phần 1. Phân tích
+So sánh sự khác biệt về lưu trữ trạng thái giữa Incognito Mode (tạm thời trên RAM) và Dedicated Profile (lâu dài trên ổ cứng).
+Incognito Mode: Lưu dữ liệu tạm thời, đóng trình duyệt sẽ bị xóa
+ Dedicated Profile: Lưu dữ liệu lâu dài trên ổ cứng (cookie, mật khẩu, lịch sử, bookmark)
+
+=> Nên tạo 3 Profile riêng: Personal - Work - Sandbox để tránh xung đột phiên đăng nhập
+Phần 2. Triển khai
+Mô tả quy trình tạo và đồng bộ hóa Cloud Sync để bảo vệ Bookmark khi đổi máy tính.
+Tạo 3 Profile độc lập và bật Cloud Sync cho từng Profile để đồng bộ bookmark, mật khẩu và cài đặt khi đổi máy tính.
+
+Cấu trúc Bookmark:
+
+Plain Text
+Work
+- Portal công ty
+- GitHub
+- Canvas LMS
+Personal
+- Gmail
+- Facebook
+Sandbox
+- Test Environment
+Phần 3. Kiểm thử
+
+Giả định làm việc trên máy tính công cộng, hãy đề xuất quy tắc sử dụng Guest Profile để bảo mật.
+Khi dùng máy tính công cộng:
+
+Sử dụng Guest Profile.
+Không lưu mật khẩu.
+Không bật đồng bộ tài khoản.
+Đăng xuất sau khi sử dụng.
+Đóng toàn bộ cửa sổ Guest.
+
+=> Đảm bảo mật khẩu và lịch sử cá nhân không xuất hiện trong Profile công việc hoặc trên máy lạ.
