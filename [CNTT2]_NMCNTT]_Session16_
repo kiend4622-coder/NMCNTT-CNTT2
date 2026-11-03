@@ -1,0 +1,45 @@
+Đề bài / Yêu cầu
+1. Bối cảnh
+
+Hệ thống vận tải yêu cầu shipper phải đăng nhập để nhận đơn. Tuy nhiên, mỗi lần shipper đóng trình duyệt hoặc load lại trang, giỏ hàng phụ tùng xe lại bị trống rỗng và shipper phải đăng nhập lại từ đầu.
+
+2. Yêu cầu
+
+Chức năng 1 (Duy trì trạng thái): Vận dụng kiến thức về Persistent Cookies để thiết lập cơ chế ghi nhớ phiên làm việc thay vì sử dụng Session Cookies.
+
+Chức năng 2 (Bảo mật): Thiết lập các cờ bảo mật HttpOnly và Secure để ngăn chặn hành vi đánh cắp Session (Session Hijacking).
+
+3. Ràng buộc
+
+Phải đảm bảo dữ liệu định danh người dùng không bị mã JavaScript phía Client truy cập trái phép.
+
+4. Yêu cầu đầu ra
+
+Phần 1. Phân tích
+
+So sánh sự đánh đổi giữa dung lượng Cache (MB/GB) và Cookies (~4KB) trong việc lưu trữ dữ liệu người dùng.
+_Cache có dung lượng lớn (MB đến GB), dùng để lưu ảnh, CSS, JavaScript giúp tăng tốc độ tải trang. Cookies có dung lượng nhỏ (khoảng 4KB), dùng để lưu thông tin đăng nhập và trạng thái người dùng.
+
+Để duy trì đăng nhập và giỏ hàng sau khi đóng trình duyệt, nên sử dụng Persistent Cookies thay vì Session Cookies
+
+Phần 2. Triển khai
+
+Mô tả cấu trúc mẩu tin Cookie cần thiết (bao gồm Token, Max-Age, và các cờ bảo mật).
+token=abc123;
+Max-Age=2592000;
+HttpOnly;
+Secure;
+
+Phần 3. Kiểm thử
+
+Nếu shipper thay đổi giao diện nhưng trình duyệt vẫn hiện màu cũ, hãy hướng dẫn thao tác Hard Reload để xóa Cache đệm.
+_Nếu giao diện đã thay đổi nhưng trình duyệt vẫn hiển thị phiên bản cũ thì nguyên nhân là do Cache.
+
+Thực hiện Hard Reload:
+
+Windows/Linux: Ctrl + F5 hoặc Ctrl + Shift + R
+MacOS: Cmd + Shift + R
+
+Hoặc mở F12 → giữ nút Refresh → Empty Cache and Hard Reload.
+
+Kết quả: Trình duyệt xóa bộ nhớ đệm và tải dữ liệu mới từ máy chủ.
