@@ -1,0 +1,34 @@
+4. Yêu cầu đầu ra
+
+Phần 1. Phân tích
+
+Giải thích vai trò của JSON Viewer trong việc gỡ lỗi dữ liệu API thô từ máy chủ.
+ _ JSON Viewer giúp đọc và format dữ liệu JSON từ API GPS dễ dàng, hỗ trợ tìm lỗi dữ liệu, kiểm tra cấu trúc và theo dõi các trường như vehicleId, latitude, longitude, speed.
+Phần 2. Triển khai
+5 Extensions cần có
+
+Dev Suite
+
+JSON Viewer
+JSON Formatter
+
+Productivity 3. ColorZilla 4. VisBug
+
+Security 5. uBlock Origin
+
+Ghim lên Toolbar
+Nhấn biểu tượng Extensions (mảnh ghép).
+Chọn biểu tượng  Pin cạnh từng extension.
+Thiết lập Site Access
+Vào chrome://extensions
+Chọn Extension → Details
+Mục Site Access → chọn On click
+
+Phần 3. Kiểm thử
+
+Nếu trình duyệt bị lag, hãy hướng dẫn quy trình kiểm tra mức tiêu thụ tài nguyên của từng Extension trên trang chrome://extensions.
+Mở chrome://extensions
+Bật Developer mode
+Nhấn Shift + Esc mở Chrome Task Manager
+Kiểm tra RAM và CPU của từng Extension
+Tắt hoặc gỡ Extension tiêu tốn nhiều tài nguyên nhất
