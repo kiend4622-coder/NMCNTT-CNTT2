@@ -1,0 +1,32 @@
+4. Yêu cầu đầu ra
+Phần 1. Phân tích
+Xác định "nút thắt cổ chai" (bottleneck) làm chậm trang web dựa trên biểu đồ Waterfall.
+_Bottleneck: Các request 404 (màu đỏ) và các ảnh dung lượng lớn làm kéo dài Waterfall, khiến trang tải chậm và bản đồ hiển thị muộn.
+Phần 2. Triển khai
+
+Đề xuất quy trình 3 bước tối ưu: Sửa lỗi đứt link (404), nén tài nguyên hình ảnh, và bật cơ chế Browser Cache cho tài nguyên tĩnh.
+Quy trình tối ưu 3 bước
+
+1 Sửa lỗi 404
+
+Kiểm tra các file CSS, JS, ảnh bị thiếu.
+Đảm bảo các file quan trọng trả về 200 OK.
+
+2 Nén hình ảnh
+
+Giảm kích thước ảnh.
+Ưu tiên định dạng WebP.
+
+3 Bật Browser Cache
+
+Cache CSS, JS, hình ảnh tĩnh.
+Giúp các lần tải sau nhận 304 Not Modified thay vì tải lại toàn bộ.
+Phần 3. Kiểm thử
+
+Giả định khi reload trang mà nhận mã 304 Not Modified, hãy giải thích tại sao đây là một tín hiệu tốt cho băng thông hệ thống.
+
+304 Not Modified là tín hiệu tốt vì trình duyệt sử dụng dữ liệu đã lưu trong cache, không phải tải lại tài nguyên từ máy chủ. Điều này giúp:
+
+-Giảm băng thông.
+-Tăng tốc độ tải trang.
+-Giảm tải cho server.
