@@ -1,0 +1,24 @@
+4. Yêu cầu đầu ra
+
+Phần 1. Phân tích
+
+Vẽ lại sơ đồ Box Model hiện tại của phần tử lỗi qua tab Computed.
+Dùng F12 → Inspect Element để xác định thẻ HTML bị lỗi trong DOM Tree. Trong tab Computed, kiểm tra Box Model gồm 4 lớp: Content, Padding, Border, Margin. Nếu Margin hoặc Padding không hợp lý, hai khung có thể bị chồng lấn.
+Phần 2. Triển khai
+
+Đưa ra thông số CSS mới giúp sửa lỗi chồng lấn giao diện.
+.driver-info {
+    margin-bottom: 20px;
+}
+
+.station-list {
+    margin-top: 20px;
+}
+
+Phần 3. Kiểm thử
+
+Giả định thay đổi Margin nhưng phần tử vẫn không di chuyển, hãy kiểm tra xem có thuộc tính nào đang ghi đè ở tầng Browser Engine không?
+_Nếu thay đổi margin nhưng phần tử không di chuyển:
+-Kiểm tra xem thuộc tính có bị ghi đè trong tab Styles không.
+-Kiểm tra các thuộc tính như position: absolute, position: fixed hoặc !important.
+-Kiểm tra Browser/User Agent Stylesheet trong DevTools.
