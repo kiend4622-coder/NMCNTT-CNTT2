@@ -1,0 +1,51 @@
+4. Yêu cầu đầu ra
+
+Phần 1. Phân tích
+
+Xác định Input (Tên miền) / Output (IP address) và mô tả sơ đồ luồng dữ liệu của DNS.
+-Input: Tên miền (Domain Name) do người dùng nhập vào trình duyệt.
+
+-Output: Địa chỉ IP của máy chủ web.
+Người dùng nhập tên miền
+→ DNS Cache
+→ DNS Resolver
+→ Root DNS
+→ TLD DNS (.vn)
+→ Authoritative DNS
+→ Trả về IP
+→ Kết nối Web Server
+Phần 2. Triển khai
+
+Đề xuất quy trình kiểm tra mã trạng thái HTTP Status Code để xác nhận xem yêu cầu đã chạm tới máy chủ hay chưa.
+_Quy trình kiểm tra HTTP Status Code để xác nhận yêu cầu đã chạm tới máy chủ hay chưa:
+
+Bước 1: Kiểm tra DNS bằng nslookup hoặc ping tên miền.
+Bước 2: Nếu DNS trả về địa chỉ IP, truy cập website.
+Bước 3: Nhấn F12 → Network → Refresh trang.
+Bước 4: Kiểm tra mã HTTP Status Code:
+200 OK: Yêu cầu đã tới máy chủ và xử lý thành công.
+404 Not Found: Yêu cầu đã tới máy chủ nhưng tài nguyên không tồn tại.
+500 Internal Server Error: Yêu cầu đã tới máy chủ nhưng máy chủ gặp lỗi.
+Nếu chỉ xuất hiện DNS_PROBE_FINISHED_NXDOMAIN và không có mã HTTP thì yêu cầu chưa tới máy chủ.
+Phần 3. Kiểm thử
+
+Giả định Nam sửa đúng tên miền nhưng vẫn nhận mã 404 Not Found, hệ thống đang gặp vấn đề gì?
+Tình huống: Nam sửa đúng tên miền nhưng nhận mã 404 Not Found.
+
+Kết luận:
+
+DNS hoạt động bình thường.
+Máy chủ vẫn hoạt động.
+Yêu cầu đã được gửi tới máy chủ thành công.
+Tài nguyên hoặc đường dẫn được yêu cầu không tồn tại.
+
+Nguyên nhân có thể:
+
+Nhập sai URL hoặc đường dẫn.
+Trang web đã bị xóa hoặc di chuyển.
+Cấu hình route của website bị lỗi.
+5. Quy định nộp bài
+
+Đưa bản phân tích và hình ảnh minh họa (F12) lên repository GitHub định dạng: [Tên Lớp]_[Môn Học]_Session16_Ex01.
+
+Nộp đường dẫn repository lên hệ thống Portal.
