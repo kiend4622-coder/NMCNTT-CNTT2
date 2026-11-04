@@ -1,0 +1,72 @@
+4. Yêu cầu đầu ra
+
+Phần 1: Phân tích 2 Giải pháp Xác thực
+
+1. Phân tích 3 yếu tố xác thực danh tính số (Know, Have, Are). Khi kích hoạt 2FA, mật khẩu đại diện cho yếu tố nào và mã OTP đại diện cho yếu tố nào?
+Something You Know (Điều bạn biết): Mật khẩu, mã PIN.
+Something You Have (Điều bạn sở hữu): Điện thoại nhận OTP, ứng dụng Authenticator, USB Security Key.
+Something You Are (Điều bạn là): Vân tay, khuôn mặt, mống mắt.
+Trong 2FA:
+
+Mật khẩu → thuộc yếu tố Something You Know.
+Mã OTP (SMS hoặc TOTP) → thuộc yếu tố Something You Have.
+
+2. Giải thích nguyên lý hoạt động của Thuật toán TOTP (Time-based One-Time Password): Tại sao ứng dụng Authenticator có thể sinh ra mã OTP đếm lùi 30 giây hoàn toàn chính xác khi điện thoại bật Chế độ Máy bay (ngắt hoàn toàn Wi-Fi, 4G và SMS)?
+TOTP hoạt động dựa trên:
+
+Một Shared Secret Key được lưu trên máy chủ và ứng dụng Authenticator.
+Thời gian hiện tại của thiết bị.
+
+Ứng dụng sử dụng khóa bí mật và thời gian để tính toán mã OTP mới mỗi 30 giây. Vì khóa bí mật đã được lưu sẵn trên điện thoại nên ứng dụng không cần Internet, Wi-Fi hay SMS để tạo mã. Chỉ cần đồng hồ thiết bị chính xác là TOTP vẫn hoạt động kể cả khi bật Chế độ máy bay.
+Phần 2: Lập bảng So sánh Trade-off & Ra quyết định
+
+3. Lập bảng so sánh chi tiết giữa Giải pháp 1 (SMS OTP) và Giải pháp 2 (Authenticator TOTP) dựa trên 4 tiêu chí cốt lõi:
+
+Tiêu chí đánh giá
+
+Giải pháp 1: SMS OTP
+
+Giải pháp 2: TOTP Authenticator
+1. Khả năng chống tấn công
+
+SMS OTP: Dễ bị SIM Swapping, nghe lén.
+TOTP: An toàn hơn, không phụ thuộc nhà mạng.
+
+2. Hoạt động Offline/Nước ngoài
+
+SMS OTP: Cần sóng điện thoại.
+TOTP: Hoạt động 100% offline.
+
+3. Tiện dụng & Chi phí
+
+SMS OTP: Dễ dùng nhưng tốn phí SMS.
+TOTP: Cần cài app nhưng miễn phí.
+
+4. Mất điện thoại
+
+SMS OTP: Có thể lấy lại bằng SIM mới nhưng dễ bị lợi dụng.
+TOTP: Cần Backup Codes hoặc Cloud Sync để khôi phục.
+
+
+4. Đưa ra kết luận lựa chọn: Ban Giám đốc PixelForge Studio nên áp dụng giải pháp nào cho đội ngũ kỹ sư? Giải thích lý do lựa chọn dựa trên bối cảnh di chuyển linh hoạt và rủi ro tấn công SIM Swapping.
+PixelForge Studio nên chọn Authenticator TOTP.
+
+Lý do:
+
+Bảo vệ tốt hơn trước tấn công SIM Swapping.
+Không phụ thuộc nhà mạng khi đi công tác hoặc trên máy bay.
+Miễn phí vận hành.
+Phù hợp với tài khoản quản trị chứa mã nguồn và doanh thu lớn của công ty.
+Phần 3: Quản lý Rủi ro & Backup Codes
+
+5. Khi kích hoạt 2FA qua Authenticator, hệ thống luôn cung cấp bộ 10 Mã Khôi phục (Backup / Recovery Codes). Hãy nêu rõ: Mục đích của bộ mã này là gì? Hướng dẫn nhân viên 2 vị trí an toàn tuyệt đối để lưu trữ bộ mã này và 1 sai lầm tai hại cần tránh.
+Mục đích: Dùng để đăng nhập khi mất điện thoại hoặc không truy cập được ứng dụng Authenticator.
+
+Nơi lưu an toàn:
+
+In ra giấy và cất trong két sắt.
+Lưu trong trình quản lý mật khẩu (Bitwarden, 1Password,...).
+
+Sai lầm cần tránh:
+
+Chụp ảnh màn hình hoặc lưu Backup Codes trên điện thoại/email không được bảo mật.
