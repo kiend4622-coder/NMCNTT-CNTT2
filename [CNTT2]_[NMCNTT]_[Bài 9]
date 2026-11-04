@@ -1,0 +1,32 @@
+4. Yêu cầu đầu ra
+
+Phần 1: Báo cáo phân tích kiến trúc an ninh mật khẩu
+
+1. Phân tích vì sao thói quen lưu mật khẩu trên trình duyệt Google Chrome (tệp Login Data) lại cực kỳ nguy hiểm đối với lập trình viên khi máy tính bị nhiễm mã độc Infostealer?
+
+Mã độc Infostealer có thể đánh cắp toàn bộ mật khẩu đã lưu, dẫn đến mất GitHub, AWS, Steam... chỉ trong vài phút.
+
+2. Giải thích bản chất kỹ thuật của Kiến trúc Zero-Knowledge và cơ chế Client-side Decryption: Nếu máy chủ đám mây của Bitwarden bị hacker tấn công, dữ liệu Két sắt của PixelForge Studio có bị giải mã không? Vì sao?
+
+Bitwarden không biết và không đọc được mật khẩu của người dùng. Dữ liệu được mã hóa trên thiết bị và chỉ giải mã trên thiết bị.
+
+Phần 2: Thiết kế Chính sách & Kịch bản Chuyển đổi
+
+3. Thiết kế phương pháp tạo một Master Passphrase đạt chuẩn: Dài tối thiểu 20 ký tự, dễ nhớ đối với con người nhưng bất khả thi đối với các cỗ máy tấn công vét cạn (Brute-Force Attack). Đưa ra 01 ví dụ cụ thể về Passphrase chuẩn.
+
+Dragon!River#Mountain2026
+(Dài, dễ nhớ, khó đoán)
+
+4. Xây dựng bảng cấu hình chuẩn cho công cụ Generator trong Bitwarden để áp dụng thống nhất cho 40 tài khoản của studio (Quy định độ dài, loại ký tự hoa/thường/số/ký tự đặc biệt).
+
+- Độ dài: 24 ký tự
+- Chữ hoa: Bật
+- Chữ thường: Bật
+- Số: Bật
+- Ký tự đặc biệt: Bật
+
+5. Giải thích vì sao tính năng Tự động Điền (Auto-fill) của Bitwarden lại có khả năng chống tấn công Phishing giả mạo tên miền (như githúb.com hay steampowered.xyz) hiệu quả hơn con người?
+Bitwarden chỉ tự điền trên đúng website đã lưu (ví dụ github.com), không tự điền trên website giả mạo như githúb.com.
+6. Thiết lập quy trình lưu trữ Khóa Cấp cứu (Emergency Kit) để đảm bảo Trưởng nhóm có thể khôi phục quyền truy cập nếu Trưởng phòng Kỹ thuật gặp sự cố đột xuất.
+
+Ghi Master Password + Recovery Code ra giấy, cất trong két công ty và giao 1 bản dự phòng cho quản lý để khôi phục khi khẩn cấp.
