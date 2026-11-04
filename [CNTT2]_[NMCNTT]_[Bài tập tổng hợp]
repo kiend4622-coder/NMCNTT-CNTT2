@@ -1,0 +1,105 @@
+5. Yêu cầu
+Phần 1 – Nhận diện rủi ro và xử lý sự cố
+Tình huống 1: gọi đúng tên loại tấn công (trong số Phishing / Spear Phishing / Typosquatting) và chỉ ra chính xác chi tiết nào trong email cho thấy đây là giả mạo.
+Phishing + Typosquatting.\
+Link giả mạo: githuh-security.com ≠ github.com
+
+Tình huống 2: gọi đúng tên cạm bẫy và giải thích vì sao yêu cầu "tắt Windows Defender" là dấu hiệu cực kỳ nguy hiểm.
+Mã độc Crack
+Yêu cầu tắt Windows Defender để mã độc dễ xâm nhập máy.
+
+Đối chiếu 2 tình huống với Quy tắc 5 KHÔNG — bạn khuyên bạn cùng nhóm áp dụng điều KHÔNG nào cho mỗi tình huống?
+
+- TH1: Không bấm link lạ, không nhập mật khẩu.
+- TH2: Không tải crack, không tắt Defender.
+
+Giả sử bạn cùng nhóm đã lỡ tải và chạy file crack ở Tình huống 2. Viết lại đúng thứ tự 4 Bước Cấp cứu cần thực hiện ngay.
+
+1. Ngắt mạng.
+2. Đổi mật khẩu.
+3. Quét virus.
+4. Bật/kiểm tra 2FA.
+
+Phần 2 – Chuyển sang Password Manager
+Dựa trên ghi chú ở mục 3c: nếu email nhóm bị lộ mật khẩu, điều gì xảy ra với 2 tài khoản còn lại? Gọi đúng tên kiểu tấn công có thể xảy ra.
+email bị lộ mật khẩu thì GitHub và Vercel cũng có thể bị chiếm do dùng chung mật khẩu.
+
+Giải thích ngắn gọn vì sao Zero-Knowledge Architecture giúp dữ liệu vẫn an toàn kể cả khi máy chủ Bitwarden bị hacker xâm nhập.
+Bitwarden dùng Zero-Knowledge, chỉ người dùng biết mật khẩu chính nên hacker hack máy chủ cũng không đọc được dữ liệu
+
+Viết thông số cấu hình công cụ Generator để tạo 3 mật khẩu mới, riêng biệt cho GitHub, Vercel và Email nhóm:
+
+Thông số
+
+Giá trị cấu hình
+
+Độ dài
+
+24
+
+Chữ hoa (A–Z)
+
+có
+
+Chữ thường (a–z)
+có
+
+Chữ số (0–9)
+
+có
+
+Ký tự đặc biệt
+
+có
+
+Phần 3 – Kích hoạt 2FA cho tài khoản GitHub tổ chức
+Trưởng nhóm định dùng SMS OTP. Giải thích vì sao nên dùng Authenticator App (TOTP) thay thế, nêu đúng 2 nhược điểm của SMS OTP.
+
+- Không bị SIM Swapping.
+- Không phụ thuộc sóng điện thoại.
+
+Liệt kê đúng thứ tự các bước kích hoạt 2FA bằng Google Authenticator cho tài khoản GitHub tổ chức (từ mở cài đặt bảo mật đến khi có mã 6 số).
+Bật 2FA GitHub Settings → Password and Authentication → Enable 2FA → Authenticator App → Quét QR → Nhập mã 6 số
+
+Sau khi bật 2FA, hệ thống cấp 10 mã khôi phục dự phòng. Nêu đúng nơi nên lưu trữ và nơi không nên lưu các mã này.
+
+- Nên: Password Manager hoặc in giấy cất két.
+- Không nên: Messenger, GitHub, Google Drive công khai.
+
+Phần 4 – Bảo vệ Secrets trước khi push code
+Từ đoạn code ở mục 3b, chỉ ra chính xác 2 giá trị Secrets đang bị hardcode.
+
+- sk-proj-abc123456789
+- SmartCampus@2026
+
+Viết lại đoạn code đúng chuẩn: dùng process.env để đọc biến môi trường thay vì hardcode.
+
+const API_KEY = process.env.API_KEY;
+const DB_PASSWORD = process.env.DB_PASSWORD;
+
+function connectDatabase() {
+  return connect(DB_PASSWORD);
+}
+.env
+API_KEY=your_real_key
+DB_PASSWORD=your_real_password
+.gitignore
+.env
+.env.example
+API_KEY=
+DB_PASSWORD=
+
+Viết nội dung đầy đủ của:
+
+File .env (chứa giá trị thật)
+
+File .gitignore (đảm bảo .env không bị đẩy lên Git)
+
+File .env.example (chia sẻ an toàn cho các thành viên khác)
+
+Áp dụng Quy tắc 4 Bước Kiểm tra trước khi Push, liệt kê những gì bạn kiểm tra trước khi bấm git push lần cuối để bàn giao dự án.
+
+1. Không còn API Key/password trong code.
+2. .env đã nằm trong .gitignore.
+3. Kiểm tra file sắp commit.
+4. Rà soát lại toàn bộ rồi mới git push.
