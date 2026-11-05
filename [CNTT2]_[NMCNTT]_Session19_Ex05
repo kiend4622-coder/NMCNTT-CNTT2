@@ -1,0 +1,19 @@
+3. Yêu cầu đầu ra
+
+Thiết kế kiến trúc
+Vẽ sơ đồ luồng dữ liệu giải thích cách 3 lớp bảo vệ phối hợp với nhau để ngăn chặn hacker kể cả khi chúng có mật khẩu.
+ 
+Người dùng
+     ↓
+1. Nhập Email + Password
+     ↓
+2. Nhập mã TOTP từ Authenticator
+     ↓
+3. Xác nhận
+Xử lý bẫy (Edge Case)
+Nếu người dùng đang ở trên máy bay (không có internet/sóng điện thoại), làm sao họ vẫn có thể lấy mã OTP để thực hiện giao dịch?
+
+Không có Internet hoặc sóng điện thoại (ví dụ trên máy bay):
+
+Người dùng vẫn lấy được mã OTP từ Google Authenticator/Microsoft Authenticator vì TOTP được tạo offline trên điện thoại, không cần Internet hay SMS
+
