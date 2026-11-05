@@ -1,0 +1,21 @@
+
+3. Yêu cầu đầu ra
+
+Lập bảng so sánh dựa trên các tiêu chí: Khả năng chống Infostealer, Zero-Knowledge Architecture, và khả năng đồng bộ chéo nền tảng.
+Khả năng chống Infostealer
+Chrome: Thấp
+Bitwarden: Cao 
+
+Zero-Knowledge Architecture
+Chrome: Không 
+Bitwarden: Có 
+
+Đồng bộ đa nền tảng
+Chrome: Có 
+Bitwarden: Có 
+
+Lập luận tại sao Bitwarden thắng thế về mặt bảo mật dù tốn thêm thao tác nhập Master Password.
+Mật khẩu được mã hóa và bảo vệ bằng Master Password
+Áp dụng Zero-Knowledge, nên nhà cung cấp không biết mật khẩu của người dùng
+An toàn hơn trước mã độc Infostealer chuyên đánh cắp dữ liệu đăng nhập từ trình duyệt
+Hỗ trợ 2FA tăng cường bảo mật
