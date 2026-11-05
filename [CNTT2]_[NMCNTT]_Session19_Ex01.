@@ -1,0 +1,20 @@
+3. Yêu cầu đầu ra
+
+Chỉ ra ký tự lạ trong URL trên và giải thích tại sao nó có thể đánh lừa người dùng.
+Ký tự "ú" đã thay thế chữ "u" trong github.com.
+
+Điều này khiến URL nhìn rất giống trang GitHub thật nên dễ đánh lừa người dùng. Đây là dạng tấn công Homograph Attack
+
+Đề xuất quy trình kiểm tra URL nhanh bằng mắt thường và công cụ hỗ trợ trước khi nhập Master Password.
+1 Kiểm tra kỹ tên miền, phải là github.com.
+2 Chú ý các ký tự lạ hoặc có dấu.
+3 Di chuột vào link để xem địa chỉ thật.
+4 Sử dụng Password Manager, nếu không tự điền mật khẩu thì cần nghi ngờ.
+5 Tốt nhất tự gõ địa chỉ github.com trên trình duyệt thay vì bấm link trong email.
+
+4. Quy định nộp bài
+
+Đưa toàn bộ bài phân tích, cấu hình/mã nguồn liên quan lên repository GitHub theo định dạng: [Tên Lớp]_[Môn Học]_Session19_Ex01.
+
+Nộp đường dẫn repository (hoặc ảnh chụp minh chứng cấu hình bảo mật) lên hệ thống Portal.
+
