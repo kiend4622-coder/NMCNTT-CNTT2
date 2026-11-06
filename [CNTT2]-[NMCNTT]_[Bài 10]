@@ -1,0 +1,73 @@
+
+4. Yêu cầu đầu ra
+
+Phần 1: Lập bảng So sánh Trade-off Toàn diện
+
+1. Lập bảng so sánh chi tiết giữa Phương án 1 (Hỗ trợ cảm tính) và Phương án 2 (Troubleshooting 4 Chặng) dựa trên 4 tiêu chí cốt lõi:
+
+Tiêu chí đánh giá
+
+Phương án 1: Hỗ trợ Cảm tính / Nhóm Chat
+
+Phương án 2: Troubleshooting 4 Chặng Chuẩn hóa
+1. Thời gian xử lý sự cố (Downtime)
+
+Kéo dài — Phụ thuộc vào việc Senior Dev có rảnh để trả lời hay không
+
+Rút ngắn 80% — Tự giải quyết tại chỗ trong 5-10 phút đầu tiên
+
+2. Áp lực & Chi phí cho Senior Devs
+
+Rất cao — Bị phân tâm liên tục bởi các câu hỏi lỗi cơ bản lặp lại
+
+Tối ưu — Senior chỉ tiếp nhận các ca lỗi phức tạp có Bug Report chuẩn
+
+3. Năng lực & Tính tự chủ của KTV
+
+Thụ động, sợ hãi thông báo lỗi tiếng Anh, không tiến bộ nghề nghiệp
+
+Chủ động, tư duy phân tích sắc bén, làm chủ trọn vẹn máy tính trạm
+
+4. Khả năng lưu vết tri thức (Knowledge Base)
+
+Thất thoát — Tin nhắn trôi mất trên Zalo, người sau gặp lại lỗi cũ
+
+Lưu trữ tập trung — Tích lũy tài liệu Wiki sửa lỗi nội bộ công ty
+
+
+So sánh 2 phương án:
+
+- Phương án 1 (Hỗ trợ cảm tính): Downtime kéo dài, phụ thuộc Senior Dev, kỹ thuật viên thụ động, kiến thức dễ thất thoát trong nhóm chat.
+- Phương án 2 (Troubleshooting 4 Chặng): Xử lý nhanh hơn, giảm tải cho Senior Dev, kỹ thuật viên chủ động hơn, kiến thức được lưu trữ thành tài liệu chung.
+
+
+2. Đưa ra kết luận lựa chọn: Vì sao Ban Giám đốc VoltCharge bắt buộc phải chọn Phương án 2 nếu muốn mở rộng quy mô lên 1,000 trạm sạc?
+VoltCharge nên chọn Phương án 2 vì khi mở rộng lên 1.000 trạm sạc, không thể phụ thuộc vào vài Senior Dev. Quy trình chuẩn giúp giảm thời gian chết, tiết kiệm chi phí và nâng cao năng lực đội ngũ.
+
+Phần 2: Thiết kế Sơ đồ Luồng Ra Quyết Định (Decision Flowchart)
+
+3. Vẽ sơ đồ (dưới dạng văn bản phân cấp hoặc ASCII/bước tuần tự) thể hiện Sơ đồ luồng ra quyết định gỡ lỗi khi Kiosk gặp sự cố:
+
+Chặng 1: Khi gặp Error Pop-up ➔ Bóc tách từ khóa gõ Google toán tử site:, ``, `-`.
+
+Chặng 2: Nếu có kết quả StackOverflow/GitHub ➔ Áp dụng quy tắc đọc lướt 30s & kiểm tra Tích xanh ✓ / Upvote.
+
+Chặng 3: Nếu thông báo lỗi khó hiểu ➔ Gửi Prompt 3 thành phần cho Trợ lý AI để lấy giải thích tiếng Việt.
+
+Chặng 4: Nếu thử 2 giải pháp của AI vẫn thất bại sau 15 phút ➔ Điền phiếu Bug Report chuẩn 4 bước gửi về phòng IT Helpdesk.
+
+Gặp lỗi trên Kiosk
+↓
+Bóc tách từ khóa lỗi → Tìm Google (site:, -, "")
+↓
+Có kết quả StackOverflow/GitHub?
+├─ Có → Đọc nhanh, kiểm tra ✓ và Upvote → Thử giải pháp
+└─ Không
+↓
+Dùng AI với Prompt 3 thành phần (Context + Raw Error + Instruction)
+↓
+Thử tối đa 2 giải pháp AI đưa ra
+↓
+Lỗi vẫn tồn tại sau 15 phút?
+├─ Không → Hoàn thành
+└─ Có → Tạo Bug Report chuẩn và gửi IT Helpdesk
