@@ -1,0 +1,116 @@
+5. Yêu cầu
+Phần 1 – Googling đúng cách
+Giải thích vì sao câu hỏi "văn nói" ở mục 3b khiến Google trả về kết quả kém chất lượng.
+
+Bóc tách lỗi ở mục 3a theo 3 thành phần cốt lõi:
+
+Thành phần
+
+Nội dung bóc tách
+
+Tên phần mềm / Hệ điều hành
+Node.js, npm, Windows 11
+Mã lỗi nguyên văn
+is not recognized as an internal or external command
+Thao tác đang làm
+
+npm -v
+Viết 3 câu truy vấn Google tối ưu, mỗi câu dùng 1 toán tử khác nhau:
+
+1 câu giới hạn trong StackOverflow (site:)
+site:stackoverflow.com npm is not recognized windowsv
+1 câu dùng ngoặc kép cho lỗi nguyên văn (" ")
+
+ "npm is not recognized as an internal or external command"
+1 câu loại trừ các bài viết cũ không liên quan (-)
+
+npm is not recognized -windows-xp
+Phần 2 – Thẩm định StackOverflow
+So sánh Câu trả lời A và B ở mục 3c theo 3 tiêu chí thẩm định uy tín:
+
+Tiêu chí
+
+Câu trả lời A
+ 
+Câu trả lời B
+
+Vote & Tích xanh
+
+?
+
+?
+
+Thời gian đăng bài
+
+?
+
+?
+
+Tags khớp hệ điều hành/phần mềm
+
+?
+
+?
+
+
+
+- Câu A: Có tích xanh, +186 vote, đăng 2 năm trước, đúng tag Node.js/Windows/npm.
+- Câu B: Không tích xanh, +2 vote, đăng 9 năm trước, dùng Windows XP.
+
+
+Kết luận bạn áp dụng câu trả lời nào và giải thích vì sao Câu trả lời B là một "bẫy" nguy hiểm nếu áp dụng nhầm.
+Chọn Câu A vì đáng tin cậy hơn. Câu B là bẫy vì quá cũ và không phù hợp với Windows 11.
+
+Theo Quy trình 30 Giây Đọc lướt, liệt kê đúng thứ tự các bước khi mở 1 trang StackOverflow mới (thay vì đọc dịch toàn bộ phần mô tả câu hỏi).
+Tag → Vote/Tích xanh → Ngày đăng → Đọc câu trả lời được đánh giá cao nhất.
+
+Phần 3 – Hỏi AI đúng cách và nhận diện rủi ro
+Lỗi vẫn còn sau khi làm theo Câu trả lời A (mục 3d). Viết 1 Prompt hoàn chỉnh theo Công thức Prompt 3 Thành phần (Ngữ cảnh – Lỗi Nguyên văn – Yêu cầu), có nêu rõ bạn đã thử thêm PATH nhưng vẫn lỗi.
+
+Raw Error: 'npm' is not recognized as an internal or external command
+
+Đọc câu trả lời của AI ở mục 3e. Áp dụng 3 Nguyên tắc An toàn Vàng để chỉ ra: đây có phải câu trả lời an toàn để làm theo không? Vì sao?
+Không nên chạy lệnh AI đưa ra vì có nguy cơ xóa file hệ thống và làm hỏng Windows.
+
+Nếu là bạn, bạn sẽ phản hồi/hỏi lại AI như thế nào trước khi quyết định có chạy lệnh đó hay không?
+Lệnh này có tài liệu chính thức nào chứng minh không? Có cách nào kiểm tra PATH mà không tác động tới System32 không
+
+Phần 4 – Viết Bug Report chuẩn để nhờ hỗ trợ
+Sau khi thử cả 3 bước trên vẫn chưa hết lỗi, bạn quyết định nhắn tin nhờ trợ giảng của lớp hỗ trợ.
+
+Viết 1 tin nhắn kiểu "Tin nhắn Kém" (mù mờ, thiếu ngữ cảnh) như ví dụ đã học.
+Thầy ơi máy em bị lỗi npm.
+
+Viết lại thành 1 tin nhắn chuẩn, đầy đủ 4 mảnh ghép của Bug Reporting Framework:
+
+Mảnh ghép
+
+Nội dung trong tin nhắn của bạn
+
+Context
+
+Windows 11, VS Code, vừa cài Node.js.
+
+Expected
+
+npm -v hiển thị phiên bản.
+
+Actual
+
+Báo lỗi 'npm' is not recognized...
+
+Log & Screenshot
+
+Đã thêm PATH theo StackOverflow nhưng vẫn lỗi, đính kèm ảnh.
+
+Nêu đúng phím tắt chụp màn hình trên Windows đã học và 1 lưu ý bảo mật khi đính kèm ảnh chụp.
+Windows + Shift + S
+6. Quy định nộp bài
+Nộp 1 file (.docx hoặc .md) trình bày đầy đủ câu trả lời Phần 1–4.
+
+Đặt tên file theo định dạng:
+
+[Tên Lớp]_[Môn Học]_[Session bài học]_[Bài]
+
+Nộp file lên hệ thống Portal trước deadline.
+
