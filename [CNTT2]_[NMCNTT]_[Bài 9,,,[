@@ -1,0 +1,34 @@
+5. Yêu cầu đầu ra
+
+Phần 1: Thiết kế Prompt 3 Thành phần Chuẩn hóa
+
+1. Phân tích nguyên nhân vì sao câu hỏi 'AI ơi phần mềm trạm sạc của tôi bị hỏng rồi' lại khiến AI đưa ra câu trả lời sai lệch (hiện tượng AI Hallucination)?
+
+Do câu hỏi quá chung chung, không có ngữ cảnh và không cung cấp mã lỗi nên AI phải đoán nguyên nhân, dễ dẫn đến Hallucination.
+2. Soạn thảo một câu Prompt 3 Thành phần hoàn chỉnh, chuyên nghiệp dựa trên đoạn nhật ký lỗi trên để gửi cho Trợ lý AI (phân tách rõ 3 phần: [Context], [Raw Error], [Instruction]).
+
+
+[Context] Trạm sạc VoltCharge #04 trên Windows 11 không khởi động được.
+[Raw Error] Access to the path 'C:\Program Files\VoltCharge\data\session.log' is denied.
+[Instruction] Hãy giải thích lỗi bằng tiếng Việt đơn giản và đưa ra 3 bước khắc phục.
+
+Phần 2: Giải mã Lỗi & Kịch bản Khắc phục
+
+3. Đóng vai Trợ lý AI, hãy cung cấp bản dịch và giải thích nguyên nhân gốc rễ của lỗi UnauthorizedAccessException: Access to the path ... is denied bằng tiếng Việt đời thường để một bạn kỹ thuật viên mới cũng có thể hiểu ngay.
+
+Phần mềm muốn ghi dữ liệu vào thư mục Program Files nhưng không có quyền truy cập nên bị dừng hoạt động.
+
+4. Đưa ra 3 bước xử lý cụ thể tại chỗ trên Windows 11 để kích hoạt quyền Quản trị viên (Run as Administrator) và phân quyền ghi file cho thư mục data, giúp trạm sạc hoạt động trở lại bình thường.
+
+- Chạy chương trình bằng Run as Administrator.
+- Cấp quyền ghi cho thư mục data.
+- Khởi động lại phần mềm và kiểm tra.
+
+5. Bẫy an ninh: Giả sử trong đoạn mã lỗi có chứa chuỗi mã bí mật API_KEY: volt_secret_token_889922, kỹ thuật viên phải xử lý chuỗi này như thế nào trước khi dán vào khung chat của ChatGPT/Gemini? Giải thích lý do.
+
+Nếu có chuỗi:
+API_KEY: volt_secret_token_889922
+phải xóa hoặc che lại thành:
+API_KEY: ********
+trước khi gửi cho AI để tránh lộ thông tin bảo mật.
+
