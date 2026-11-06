@@ -1,0 +1,13 @@
+2. Yêu cầu đầu ra
+
+Lập bảng so sánh Ưu/Nhược điểm của Google Search và AI Assistant dựa trên các tiêu chí: Độ chính xác, Tính cập nhật, Khả năng giải thích và Rủi ro (Hallucination).
+| Tiêu chí  | Google Search | AI Assistant |
+|-----------|-------------- |------------- |
+| Độ chính xác | Cao nếu từ nguồn uy tín   | Có thể sai |
+| Tính cập nhật | Thông tin mới nhất | Có thể không cập nhật |
+| Khả năng giải thích | Phải tự đọc | Giải thích dễ hiểu |
+| Hallucination | Thấp | Có thể xuất hiện |
+Đưa ra lựa chọn: Trong trường hợp nào thì bắt buộc phải dùng Google Search để đảm bảo an toàn cho máy tính?
+_Thực hiện lệnh ảnh hưởng hệ thống (xóa file, sửa Registry, cài/gỡ phần mềm).
+_ Cần tài liệu chính thức hoặc thông tin phiên bản mới nhất.
+_ Muốn xác minh lại câu trả lời của AI để tránh Hallucination.
