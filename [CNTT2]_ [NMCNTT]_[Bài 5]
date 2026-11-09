@@ -1,0 +1,39 @@
+3. Yêu cầu đầu ra
+
+Thiết kế kiến trúc
+
+Xây dựng một mẫu Bug Report Template dựa trên 4 mảnh ghép (Context, Expected, Actual, Log) để các thành viên bắt buộc phải điền trước khi hỏi.
+
+Sản phẩm hoàn chỉnh
+
+BUG REPORT TEMPLATE
+
+1. Context
+- Môi trường: (Windows/Linux/macOS)
+- Công cụ: (Docker, NodeJS,...)
+- Thao tác trước khi lỗi xuất hiện:
+
+2. Expected
+- Kết quả mong muốn:
+
+3. Actual
+- Kết quả thực tế:
+- Thông báo lỗi:
+
+4. Log
+- Ảnh chụp màn hình hoặc log lỗi:
+
+
+Đề xuất một quy trình 3 bước tra cứu bắt buộc (Googling ➔ Community Search ➔ AI Translation) để thành viên tự xử lý 80% vấn đề trước khi nhờ hỗ trợ.
+QUY TRÌNH TRA CỨU 3 BƯỚC
+
+Bước 1: Googling
+- Tìm lỗi trên Google bằng thông báo lỗi chính xác.
+
+Bước 2: Community Search
+- Tìm trên StackOverflow, GitHub Issues, Reddit.
+
+Bước 3: AI Translation
+- Đưa lỗi và kết quả tìm được cho AI để giải thích, tóm tắt và đề xuất cách xử lý.
+
+Chỉ khi hoàn thành cả 3 bước mà vẫn không giải quyết được mới hỏi nhóm.
