@@ -1,0 +1,25 @@
+4. Yêu cầu đầu ra
+
+Báo cáo phân tích (IPO): Xác định Input (Câu trả lời của AI), Process (Quy trình kiểm chứng bằng toán tử site:stackoverflow.com hoặc trang chủ phần mềm), Output (Xác nhận lệnh an toàn/không an toàn).
+Input:
+
+Câu trả lời của AI chứa lệnh Terminal để sửa lỗi "Path not found".
+
+Process:
+
+Kiểm tra lệnh trên trang chính thức hoặc:
+Plain Text
+site:stackoverflow.com "Path not found" python
+Đối chiếu với tài liệu chính thức của Python.
+
+Output:
+
+Kết luận lệnh an toàn hoặc không an toàn trước khi chạy 
+
+Thiết kế một câu lệnh (Prompt) "hỏi ngược lại" AI để yêu cầu nó giải thích độ an toàn của câu lệnh trước khi bạn thực thi.
+Trước khi tôi chạy lệnh này, hãy giải thích chi tiết:
+1. Lệnh này làm gì?
+2. Thành phần nào của hệ điều hành bị thay đổi?
+3. Có rủi ro nào không?
+4. Nguồn tham khảo chính thức ở đâu?
+5. Có cách an toàn hơn để thực hiện không?
