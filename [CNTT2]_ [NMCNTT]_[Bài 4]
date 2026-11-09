@@ -1,0 +1,18 @@
+3. Yêu cầu đầu ra
+
+Lập bảng so sánh Ưu/Nhược điểm của 2 giải pháp này dựa trên các tiêu chí: Độ tin cậy lịch sử, Tính cập nhật với hệ điều hành mới, và rủi ro gây hỏng thiết lập hiện tại.
+Tiêu chí                    | Giải pháp 1                 | Giải pháp 2
+--------------------------- | --------------------------- | --------------------------
+Độ tin cậy lịch sử          | Cao (500 upvotes, ✓)        | Trung bình
+Tính cập nhật               | Thấp hơn (2014)             | Cao hơn (2023)
+Hỗ trợ Windows 11           | Chưa rõ                     | Có xác nhận từ comment
+Rủi ro lỗi thời             | Cao hơn                     | Thấp hơn
+Rủi ro hỏng cấu hình        | Có thể do quá cũ            | Thường phù hợp hiện tại hơn
+
+Lựa chọn: Giải pháp 2.
+
+Lý do: Dù không có tích xanh, nhưng mới hơn và đã được xác nhận hoạt động trên Windows 11. Tích xanh chỉ đúng tại thời điểm câu trả lời được chấp nhận, không đảm bảo còn phù hợp với hệ điều hành và phần mềm hiện nay.
+Chốt lựa chọn của bạn và lập luận tại sao "Tích xanh" đôi khi không còn là ưu tiên số 1.
+Tích xanh chỉ cho biết đáp án được chấp nhận tại thời điểm đăng.
+Công nghệ thay đổi theo thời gian.
+Một đáp án mới hơn có thể phù hợp với phiên bản hệ điều hành và phần mềm hiện tại hơn.
