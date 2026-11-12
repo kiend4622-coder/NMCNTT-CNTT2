@@ -1,0 +1,26 @@
+4. Yêu cầu đầu ra
+
+- Thiết kế Master Prompt Phân tích Tài chính:  
+
+  1. Phân tích sự kết hợp CoT + RAG trong xử lý số liệu.  
+RAG: Chỉ dùng dữ liệu từ báo cáo tài chính.
+CoT: Bắt AI trình bày từng bước tính toán.
+Kết hợp: Đảm bảo đúng dữ liệu, đúng công thức, giảm ảo giác.
+  2. Xây dựng Master Prompt hoàn chỉnh gồm 4 khối:
+
+     - Khối 1 (Role): Chuyên gia Phân tích Tài chính MartX.
+      Bạn là Chuyên gia Phân tích Tài chính MartX.
+     - Khối 2 (Context RAG): Bảng số liệu Doanh thu, Giá vốn, Chi phí & Công thức chuẩn.
+     Chỉ sử dụng dữ liệu và công thức trong báo cáo tài chính được cung cấp.
+
+     - Khối 3 (Instruction CoT): Bắt buộc trình bày 4 bước (B1: Trích xuất số thô -> B2: Thay số -> B3: Tính toán chi tiết -> B4: Kết luận).
+B1. Trích xuất số liệu.
+B2. Thay số vào công thức.
+B3. Tính toán chi tiết.
+B4. Kết luận và kiểm tra lại kết quả.
+
+     - Khối 4 (Negative Constraint): Không tự làm tròn, không dùng số ngoài bảng.
+- Không tự làm tròn số.
+- Không dùng số ngoài báo cáo.
+- Không cộng Doanh thu tài chính vào Doanh thu thuần.
+- Nếu thiếu dữ liệu, trả lời: "Không đủ dữ liệu để tính".
