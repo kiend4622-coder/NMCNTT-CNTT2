@@ -1,0 +1,17 @@
+3. Yêu cầu đầu ra
+
+Nộp: (1) Sơ đồ các bước xâu chuỗi prompt, (2) Nội dung các prompt thành phần, và (3) Cuốn cẩm nang kết quả hoàn chỉnh xuất ra từ AI.
+Prompt 1 → Giải thích AI/LLM hoạt động thế nào.
+Prompt 2 → Từ kết quả Prompt 1, liệt kê 3 dấu hiệu nhận biết ảo giác AI.
+Prompt 3 → Từ hai phần trên, tạo mẫu prompt theo khung CREATE.
+Prompt 4 → Tổng hợp thành cẩm nang hoàn chỉnh cho tân sinh viên.
+Prompt 1:
+ "Hãy giải thích ngắn gọn cách LLM hoạt động như một hệ thống dự đoán từ tiếp theo, dễ hiểu cho tân sinh viên."
+Prompt 2:
+ "Dựa trên kiến thức về LLM, hãy nêu 3 cách nhận biết AI đang tạo thông tin sai (ảo giác)."
+Prompt 3:
+ "Hãy tạo một mẫu prompt tối ưu cho việc học lập trình bằng AI theo khung CREATE."
+Prompt 4:
+ "Tổng hợp các nội dung trên thành một cẩm nang ngắn hướng dẫn tân sinh viên học lập trình cùng AI an toàn và hiệu quả."
+(3) Cẩm nang hoàn chỉnh
+Tôi là sinh viên mới học Python. Bạn đóng vai giảng viên lập trình. Hãy giải thích vòng lặp for bằng ví dụ đơn giản, trình bày dễ hiểu, sau đó cho tôi 3 bài tập thực hành kèm đáp án.
