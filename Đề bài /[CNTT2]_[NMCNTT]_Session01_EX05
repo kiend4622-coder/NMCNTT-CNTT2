@@ -1,0 +1,16 @@
+5. Yêu cầu đầu ra
+- Phần 1 (Phân tích vi phạm): Chỉ ra 2 vi phạm nghiêm trọng về chính sách AI Policy và đạo đức nghề nghiệp trong hành động của Trưởng phòng Nhân sự.
+1. Vi phạm Human-in-the-loop:
+ Trưởng phòng sa thải nhân viên chỉ dựa trên kết quả AI mà không kiểm tra, đánh giá lại bởi con người.
+
+2. Vi phạm đạo đức và trách nhiệm:
+ Cho rằng AI hoàn toàn khách quan là sai. AI có thể sai lệch hoặc thiên vị, người quản lý vẫn phải chịu trách nhiệm cho quyết định cuối cùng.
+- Phần 2 (Sơ đồ luồng 3 bước): Thiết kế Sơ đồ quy trình phối hợp 3 bước (Nhập dữ liệu -> AI đề xuất -> Human-in-the-loop thẩm định -> Ký quyết định) đảm bảo chuẩn an toàn cho MartX.
+Nhập dữ liệu
+      ↓
+AI phân tích và đề xuất
+      ↓
+Human-in-the-loop thẩm định
+(Kiểm tra, xác minh, đánh giá)
+      ↓
+Ký quyết định cuối cùng
