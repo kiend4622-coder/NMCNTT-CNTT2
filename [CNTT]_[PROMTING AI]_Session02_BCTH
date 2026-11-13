@@ -1,0 +1,24 @@
+5. Yêu cầu bài làm chi tiết
+
+Bước 1: Đề xuất 2 prompt mẫu
+
+Viết rõ 2 prompt tương ứng với 2 phương án giải quyết.
+GP1 (Đơn giản): "Hãy trích xuất cảm xúc, điểm khen/chê và đổi sang JSON từ bình luận: Giao hàng chậm 4 ngày nhưng tai nghe chống ồn đỉnh, pin trâu. 4.5 sao."
+
+GP2 (Chi tiết CREATE + Few-shot): Dùng khung vai trò, thẻ <review>, ví dụ mẫu, và ràng buộc cấm lời dẫn thừa để ép đầu ra chuẩn JSON.
+
+Bước 2: Lập bảng so sánh Trade-off
+
+Độ dễ hiểu: GP1 (Cao) | GP2 (Trung bình)
+
+Tốn Token: GP1 (Ít) | GP2 (Nhiều hơn)
+
+Chặn lỗi (Ép JSON): GP1 (Trung bình) | GP2 (Cực tốt)
+
+Bước 3: Lựa chọn và chạy thử
+
+Chọn phương án tối ưu nhất, giải thích lý do chọn và chạy thử lấy kết quả.
+
+Chọn: GP2 vì giúp ép cứng cấu trúc JSON, không bị lỗi khi tích hợp hệ thống.
+
+Kết quả: {"sentiment": "POSITIVE", "pros": ["tai nghe chống ồn đỉnh", "pin trâu"], "cons": ["giao hàng chậm"], "rating": 4.5}
