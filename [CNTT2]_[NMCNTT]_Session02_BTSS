@@ -1,0 +1,70 @@
+5. Yêu cầu bài làm chi tiết
+
+Bước 1: Đề xuất 2 prompt mẫu
+
+Viết rõ 2 prompt tương ứng với 2 phương án giải quyết.
+Giải pháp 1 (Đơn giản)
+
+Plain Text
+Tạo nội dung giới thiệu Tai nghe Bluetooth ABC.
+Gồm: tiêu đề, mô tả ngắn, 3 lợi ích.
+Xuất JSON.
+
+Giải pháp 2 (Chi tiết)
+
+Plain Text
+Bạn là chuyên gia marketing.
+- Tiêu đề ≤ 15 từ
+- Mô tả 30-50 từ
+- Đúng 3 lợi ích
+- Chỉ xuất JSON hợp lệ
+- Có ví dụ mẫu (Few-shot)
+ 
+Sản phẩm: Tai nghe Bluetooth ABC
+
+Bước 2: Lập bảng so sánh Trade-off
+
+Lập bảng so sánh tiêu chí.
+
+Tiêu chí
+
+Giải pháp 1 (Đơn giản)
+
+Giải pháp 2 (Chi tiết)
+
+Độ dễ hiểu
+
+Cao
+
+Trung bình
+
+Tốn token
+
+Ít
+
+Nhiều hơn
+
+Chặn lỗi biên
+
+Trung bình
+
+Cực tốt
+
+Tiêu chí|	Giải pháp 1|	Giải pháp 2|
+Dễ hiểu|	Cao|	Trung bình|
+Tốn token|	Ít|	Nhiều|
+Chất lượng đầu ra	|Trung bình	|Cao|
+Chặn lỗi biên|Trung bình	|Cực tốt|
+
+Bước 3: Lựa chọn và chạy thử
+
+Chọn phương án tối ưu nhất, giải thích lý do chọn và chạy thử lấy kết quả.
+{
+  "title": "Tai nghe Bluetooth ABC",
+  "description": "Tai nghe không dây với âm thanh rõ nét và kết nối ổn định.",
+  "benefits": [
+    "Kết nối nhanh",
+    "Đeo thoải mái",
+    "Âm thanh chất lượng"
+  ]
+}
