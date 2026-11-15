@@ -1,0 +1,27 @@
+5. Yêu cầu đầu ra
+
+- Phần 1 (Phân tích cơ chế): Dựa vào Mục 2.2 Lesson 02, giải thích cơ chế In-Context Learning giúp AI "bắt sóng" được ngữ cảnh như thế nào mà không cần train lại model.
+ICL là khả năng AI học từ các ví dụ trong prompt mà không cần huấn luyện lại mô hình. AI quan sát các mẫu Input → Output, rút ra quy luật và áp dụng cho dữ liệu mới. Nhờ Few-shot, AI hiểu được các câu mỉa mai, nghĩa bóng thay vì chỉ nhìn từ ngữ bề mặt.
+- Phần 2 (Sửa lỗi bằng Few-shot): Thiết kế một Prompt Few-shot hoàn chỉnh chứa 3 cặp ví dụ mẫu (Input -> Output) dạy AI cách nhận diện các đánh giá mỉa mai, khen đểu về nhiệt độ, pin và thời gian giao hàng tại TechShop.
+Phân loại cảm xúc: TÍCH CỰC hoặc TIÊU CỰC.
+ 
+Ví dụ 1:
+Input: "CPU lên 98°C sau 10 phút chơi game."
+Output: TIÊU CỰC
+ 
+Ví dụ 2:
+Input: "Pin quá khỏe, 1 tiếng còn 35%."
+Output: TIÊU CỰC
+ 
+Ví dụ 3:
+Input: "Giao hàng cực nhanh, 10 ngày mới nhận."
+Output: TIÊU CỰC
+ 
+Input:
+"Máy thiết kế đẹp mê ly, cầm rất đầm tay, mùa đông ôm máy chơi game thì khỏi cần bật lò sưởi vì nhiệt độ CPU lên hẳn 98 độ C!"
+ 
+Output:
+ 
+Kết quả chạy thử
+
+Output: TIÊU CỰC
