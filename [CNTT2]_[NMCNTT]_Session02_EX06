@@ -1,0 +1,33 @@
+4. Yêu cầu đầu ra
+
+- Phần 1: Phân tích nguyên nhân lỗi  
+
+  1. Chỉ ra lý do tại sao AI thường có thói quen tự động sinh ra lời chào hỏi và lời chúc kết luận.  
+AI thường được huấn luyện trên nhiều hội thoại tự nhiên nên có xu hướng tự động thêm lời chào, giải thích và lời kết lịch sự. Khi dùng trong hệ thống tự động, các đoạn văn bản này làm cho dữ liệu không còn là JSON thuần túy, dẫn đến lỗi JSON.parse.
+
+- Phần 2: Hoàn thiện Prompt ép cấu trúc  
+  2. Viết lại Prompt hoàn chỉnh với kỹ thuật Negative Constraint và Định dạng đầu ra nghiêm ngặt (*"Chỉ trả về chuỗi JSON thuần túy, không dùng markdown block, không giải thích, bắt đầu bằng { và kết thúc bằng }"*) để hệ thống backend parse thành công 100%.
+Bạn là hệ thống trích xuất dữ liệu bảo hành.
+
+Nhiệm vụ:
+Chuyển văn bản đầu vào thành JSON.
+
+Ràng buộc:
+- Chỉ trả về JSON hợp lệ.
+- Không lời chào, không lời kết.
+- Không giải thích.
+- Không dùng Markdown.
+- Không dùng ký tự ```json.
+- Kết quả phải bắt đầu bằng { và kết thúc bằng }.
+- Chỉ chứa các trường:
+  customer_name
+  device
+  issue
+
+Ví dụ đầu ra:
+
+{
+  "customer_name": "Trần Văn A",
+  "device": "Laptop Dell XPS 15",
+  "issue": "Liệt phím Space"
+}
