@@ -1,0 +1,9 @@
+4. Yêu cầu đầu ra
+
+CREATE
+C: Chuẩn hóa dữ liệu sinh viên từ danh sách đầu vào.
+R: Bạn là AI xử lý dữ liệu.
+E: Chuyển dữ liệu thành JSON chính xác, không mất bản ghi.
+A: Tách dữ liệu thành fullName, email, status; chuẩn hóa status chỉ gồm đang học, bảo lưu, nghỉ học; nếu thiếu/không xác định thì dùng UNKNOWN; đếm số bản ghi trước khi xuất.
+T: Chính xác, nhất quán.
+E: Chỉ trả về JSON thô: {"students":[...],"totalRecords":4}
