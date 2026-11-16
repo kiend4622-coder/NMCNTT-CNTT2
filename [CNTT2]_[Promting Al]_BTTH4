@@ -1,0 +1,7 @@
+4. Yêu cầu đầu ra
+Context: Nguyễn Văn A đại diện nhóm sinh viên gửi email cho giảng viên phụ trách môn học để xin gia hạn thời gian nộp bài tập nhóm từ ngày 20/11/2026 đến 23/11/2026 vì nhóm cần thêm thời gian kiểm thử và hoàn thiện sản phẩm.
+Role: Đóng vai Nguyễn Văn A.
+Expectation: Soạn email lịch sự, chuyên nghiệp, thể hiện trách nhiệm của nhóm.
+Action: Nêu lý do xin gia hạn, đề xuất hạn mới là 23/11/2026, cam kết hoàn thành đúng thời hạn nếu được chấp thuận và gửi lời cảm ơn.
+Tone: Tôn trọng, trang trọng.
+Expected Output: Markdown, có tiêu đề email, tối đa 180 từ, chỉ xuất một email hoàn chỉnh.
