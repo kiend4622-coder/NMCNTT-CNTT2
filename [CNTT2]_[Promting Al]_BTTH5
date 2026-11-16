@@ -1,0 +1,36 @@
+4. Yêu cầu đầu ra
+Prompt 1 (Zero-shot)
+Plain Text
+Phân loại các phản hồi sau thành: Tích cực, Tiêu cực, hoặc Yêu cầu hỗ trợ. Xuất kết quả dưới dạng bảng gồm: STT | Phản hồi | Nhãn phân loại | Lý do.
+ 
+1. "Sản phẩm đẹp, giao hàng nhanh, rất hài lòng."
+2. "Tôi đã đặt hàng 5 ngày nhưng chưa nhận được."
+3. "Tai nghe không kết nối được Bluetooth."
+4. "Nhân viên tư vấn rất nhiệt tình."
+5. "Tôi muốn hoàn tiền vì sản phẩm bị lỗi."
+Prompt 2 (Few-shot)
+Plain Text
+Ví dụ:
+- "Dịch vụ rất tốt" → Tích cực
+- "Nhân viên thái độ không tốt" → Tiêu cực
+- "Tài khoản không đăng nhập được" → Yêu cầu hỗ trợ
+ 
+Hãy phân loại các phản hồi sau và xuất bảng: STT | Phản hồi | Nhãn phân loại | Lý do.
+ 
+1. "Sản phẩm đẹp, giao hàng nhanh, rất hài lòng."
+2. "Tôi đã đặt hàng 5 ngày nhưng chưa nhận được."
+3. "Tai nghe không kết nối được Bluetooth."
+4. "Nhân viên tư vấn rất nhiệt tình."
+5. "Tôi muốn hoàn tiền vì sản phẩm bị lỗi."
+STT	Phản hồi	Nhãn phân loại	Lý do
+1	Sản phẩm đẹp, giao hàng nhanh, rất hài lòng.	Tích cực	Khen ngợi sản phẩm và dịch vụ.
+2	Tôi đã đặt hàng 5 ngày nhưng chưa nhận được.	Yêu cầu hỗ trợ	Cần hỗ trợ về giao hàng.
+3	Tai nghe không kết nối được Bluetooth.	Yêu cầu hỗ trợ	Cần hỗ trợ kỹ thuật.
+4	Nhân viên tư vấn rất nhiệt tình.	Tích cực	Khen ngợi nhân viên.
+5	Tôi muốn hoàn tiền vì sản phẩm bị lỗi.	Yêu cầu hỗ trợ	Yêu cầu xử lý và hoàn tiền.
+
+So sánh:
+
+Zero-shot: Nhanh, độ chính xác khá tốt.
+Few-shot: Chính xác và nhất quán hơn nhờ có ví dụ mẫu hướng dẫn AI.
+Kết luận: Few-shot thường cho kết quả đáng tin cậy hơn.
