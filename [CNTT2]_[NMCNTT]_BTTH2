@@ -1,0 +1,20 @@
+[CONTEXT] Chuyên gia CX và phân tích dữ liệu thị trường eCommerce.
+[REQUEST] Đọc phản hồi, trích xuất và trả về đúng 1 đối tượng JSON duy nhất (không kèm văn bản nào khác):
+{
+  "sentiment": "Positive" | "Negative" | "Neutral" | "Invalid",
+  "topics": ["Product", "Delivery", "Service", "System"],
+  "score": 1 đến 5 (hoặc null nếu Invalid),
+  "summary": "Tóm tắt ngắn dưới 15 từ, bỏ từ cảm thán"
+}
+[RULES]
+- Multi-tagging: Gắn đủ tag nếu đề cập nhiều chủ đề.
+- Rác/Trống: Gắn sentiment "Invalid", topics: [], score: null, summary: "Invalid feedback".
+- Định dạng: Chỉ xuất JSON thuần túy, cấm viết lời chào hay giải thích ngoài JSON.
+[EXTRAS - FEW-SHOT]
+- Input: "Giao hàng siêu nhanh nhưng áo bị rách chỉ!"
+  Output: {"sentiment": "Negative", "topics": ["Delivery", "Product"], "score": 2, "summary": "Giao hàng nhanh nhưng sản phẩm bị lỗi chỉ."}
+
+--- INPUT ---
+"""
+{{FEEDBACK_KHÁCH_HÀNG}}
+"""
