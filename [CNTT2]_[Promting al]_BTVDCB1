@@ -1,0 +1,40 @@
+4. Yêu cầu đầu ra chi tiết
+
+Bước 1: Phân tích lỗi:
+
+Chỉ ra 3 phần văn bản thừa thãi (như lời chào, lời kết) trong câu trả lời cũ của AI.
+
+Lời chào mở đầu
+
+"Xin chào!"
+"Rất vui được hỗ trợ bạn."
+
+Lời dẫn dài dòng
+
+"Đây là một chủ đề rất quan trọng trong lĩnh vực AI và Prompt Engineering..."
+
+Lời kết không cần thiết
+
+"Hy vọng phần giải thích trên hữu ích."
+"Nếu bạn muốn tìm hiểu sâu hơn, hãy cho tôi biết."
+
+Bước 2: Viết prompt tối ưu:
+
+Thêm các từ khóa bắt buộc định dạng gạch đầu dòng và cấm AI viết lời chào dẫn ở đầu.
+Nhiệm vụ: Giải thích ngắn gọn 3 khái niệm.
+
+Yêu cầu định dạng bắt buộc:
+- Chỉ sử dụng gạch đầu dòng.
+- Mỗi khái niệm tối đa 2 câu.
+- Không viết lời chào.
+- Không viết lời dẫn nhập.
+- Không viết lời kết.
+- Không thêm ví dụ.
+- Không sử dụng ngôn ngữ xã giao.
+
+Nội dung cần giải thích:
+1. Chain-of-Thought (CoT)
+2. Prompt Chaining
+3. Xử lý đứt gãy ngữ cảnh (Context Drift)
+
+Trả lời trực tiếp theo đúng định dạng gạch đầu dòng
