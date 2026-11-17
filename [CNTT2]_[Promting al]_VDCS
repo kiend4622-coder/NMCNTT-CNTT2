@@ -1,0 +1,57 @@
+Bước 1: Thiết kế I/O
+Input
+JSON
+{
+"ten_khach_hang": "",
+"so_dien_thoai": "",
+"san_pham": "",
+"so_luong": ""
+}
+Output
+JSON
+{
+"trang_thai": "",
+"loi": [],
+"cau_hoi": []
+}
+ 
+Bước 2: Prompt
+Plain Text
+Bạn là AI xử lý đơn hàng.
+ 
+Kiểm tra:
+- Tên khách hàng không được trống.
+- Số điện thoại phải đủ 10 số.
+- Tên sản phẩm không được trống.
+- Số lượng > 0.
+ 
+Nếu có lỗi, trả về:
+{
+"trang_thai":"Can_bo_sung",
+"loi":[...],
+"cau_hoi":[...]
+}
+ 
+Nếu hợp lệ, trả về:
+{
+"trang_thai":"Thanh_cong"
+}
+ 
+Dữ liệu:
+{
+"ten_khach_hang":"Nguyễn Văn A",
+"so_dien_thoai":"",
+"san_pham":"Laptop Dell",
+"so_luong":"2"
+}
+Kết quả chạy thử
+JSON
+{
+"trang_thai": "Can_bo_sung",
+"loi": [
+"Thiếu số điện thoại"
+],
+"cau_hoi": [
+"Vui lòng cung cấp số điện thoại."
+]
+}
