@@ -1,0 +1,32 @@
+Báo cáo thực hành tổng hợp
+1. Thiết kế giải pháp
+Áp dụng:
+Chain-of-Thought: kiểm tra dữ liệu từng bước.
+Prompt Chaining: kiểm tra → phát hiện lỗi → phản hồi.
+Xử lý đứt gãy: phát hiện dữ liệu thiếu.
+2. Prompt thực thi
+Plain Text
+Kiểm tra thông tin khách hàng:
+- Tên
+- SĐT
+- Sản phẩm
+ 
+Nếu thiếu dữ liệu, báo lỗi.
+Nếu hợp lệ, xác nhận đơn hàng.
+Trả kết quả dạng JSON.
+3. Kết quả chạy thử
+Input
+JSON
+{
+"ten":"Nguyễn Văn A",
+"sdt":"",
+"san_pham":"Laptop Dell"
+}
+
+Output
+
+JSON
+{
+"trang_thai":"Can_bo_sung",
+"loi":["Thiếu số điện thoại"]
+}
