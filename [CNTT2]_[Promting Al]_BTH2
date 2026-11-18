@@ -1,0 +1,14 @@
+Prompt 1:
+ "Phân tích khách hàng mục tiêu của AI Chatbot doanh nghiệp, xác định Customer Persona, Pain Points và cách sản phẩm giải quyết từng vấn đề."
+
+Prompt 2:
+ "Dựa trên kết quả Prompt 1, xây dựng Outline bài PR chuẩn SEO gồm: Headline, Lead, các mục H2/H3, Kết luận và CTA."
+
+Prompt 3:
+ "Dựa trên Outline ở Prompt 2, viết bài PR 1000-1500 từ, giữ giọng điệu chuyên nghiệp, tối ưu SEO và có CTA rõ ràng ở cuối bài."
+
+Luồng dữ liệu:
+ Prompt 1 (Persona + Pain Points) → Prompt 2 (Outline) → Prompt 3 (Bài PR hoàn chỉnh).
+
+Xử lý khi bị ngắt:
+ Lệnh tiếp tục: "Tiếp tục từ đoạn trước, giữ nguyên ngữ cảnh, giọng văn và cấu trúc bài viết."
