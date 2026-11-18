@@ -1,0 +1,21 @@
+Bạn là chuyên gia CSKH. Hãy sử dụng Chain\-of\-Thought để phân tích tình huống khiếu nại laptop theo các bước:
+
+1. Xác định các vấn đề khách hàng đang gặp phải.
+2. Đánh giá mức độ nghiêm trọng của từng vấn đề.
+3. Phân loại: 
+    - Dữ kiện đã xác nhận
+    - Giả thuyết
+    - Thông tin chưa xác định
+4. Liệt kê thông tin cần xác minh thêm (không tự giả định chính sách đổi trả).
+5. Đề xuất 2 phương án xử lý kèm ưu điểm và hạn chế.
+6. Soạn phản hồi chuyên nghiệp gửi khách hàng.
+
+Yêu cầu: phân tích từng bước, không kết luận khi chưa đủ căn cứ.
+
+Đầu ra gồm:
+
+- Báo cáo phân tích
+- Danh sách thông tin cần xác minh
+- 2 phương án xử lý
+- Thư phản hồi khách hàng
+
