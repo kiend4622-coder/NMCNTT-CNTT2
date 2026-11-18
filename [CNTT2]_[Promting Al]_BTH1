@@ -1,0 +1,27 @@
+Bạn là chuyên gia tài chính cá nhân.
+
+Dựa trên dữ liệu đầu vào gồm: Thu nhập, Thuế, Chi phí cố định, Các khoản nợ và Mục tiêu tiết kiệm, hãy lập kế hoạch tài chính hàng tháng.
+
+Hãy suy nghĩ từng bước một và tính toán chi tiết trước khi đưa ra quyết định.
+
+Thực hiện theo quy trình:
+
+1. Tính thu nhập khả dụng sau thuế và chi phí cố định.
+2. Trừ các khoản trả nợ tối thiểu.
+3. Trích lập tiết kiệm tối thiểu 20%.
+4. Phân bổ phần còn lại theo quy tắc 50/30/20 cải tiến.
+
+Yêu cầu đầu ra:
+
+Phần 1: Reasoning Steps**
+
+- Hiển thị đầy đủ các phép tính trung gian.
+- Không bỏ qua bước tính toán nào.
+
+Phần 2: Bảng ngân sách cuối cùng**
+
+| Hạng mục | Số tiền | Tỷ lệ % | Ghi chú |
+| --- | --- | --- | --- |
+
+Kiểm tra lại để đảm bảo tổng tỷ lệ phân bổ bằng chính xác 100%.
+
