@@ -1,0 +1,53 @@
+So sánh Trade-off Prompting AI
+Bước 1: Hai Prompt mẫu
+Giải pháp 1 (Đơn giản)
+Plain Text
+Bạn là gia sư AI.
+Hãy đánh giá bài giải thích của sinh viên, chấm điểm, chỉ ra lỗi sai và viết lại theo phương pháp Feynman.
+Giải pháp 2 (Chi tiết)
+Plain Text
+Bạn là gia sư AI và giám khảo học thuật.
+ 
+- Chấm theo Rubric (Độ chính xác, Dễ hiểu, Ví dụ, Độ sâu).
+- Báo lỗi nếu thiếu dữ liệu.
+- Đánh giá mức độ hiểu bài.
+- Chỉ ra lỗ hổng kiến thức.
+- Đưa ra gợi ý cải thiện.
+- Viết lại theo phương pháp Feynman.
+ 
+Bước 2: Bảng so sánh
+Tiêu chí	Giải pháp 1	Giải pháp 2
+Độ dễ hiểu	Cao	Trung bình
+Tốn token	Ít	Nhiều hơn
+Tốc độ	Nhanh	Chậm hơn
+Chặn lỗi biên	Trung bình	Cực tốt
+Độ chính xác	Trung bình	Cao
+Ứng dụng thực tế	Khá	Rất tốt
+Bước 3: Lựa chọn và chạy thử
+Chọn
+
+Giải pháp 2 vì kết quả chính xác hơn, có Rubric và xử lý lỗi tốt.
+
+Kết quả chạy thử
+
+Input: Machine Learning là cách máy tính học từ dữ liệu để dự đoán kết quả.
+
+Output:
+
+Plain Text
+Mức độ hiểu bài: Tốt
+ 
+Điểm:
+- Độ chính xác: 4/5
+- Dễ hiểu: 5/5
+- Ví dụ: 1/5
+- Độ sâu: 3/5
+ 
+Tổng: 13/20
+ 
+Góp ý:
+- Thiếu ví dụ thực tế.
+- Chưa giải thích quá trình huấn luyện.
+ 
+Feynman:
+Machine Learning giống như dạy trẻ em nhận biết mèo và chó từ nhiều hình ảnh. Sau khi học đủ dữ liệu, máy tính có thể dự đoán dữ liệu mới.
