@@ -1,0 +1,41 @@
+1. Thiết kế giải pháp
+
+Chuỗi Prompt gồm 4 bước:
+
+Kiểm tra dữ liệu → phát hiện thiếu hoặc sai dữ liệu.
+Đánh giá bài làm → xác định mức độ hiểu bài.
+Chấm Rubric → cho điểm từng tiêu chí.
+Feynman Feedback → viết lại nội dung dễ hiểu và gợi ý cải thiện.
+2. Prompt hệ thống
+Plain Text
+Bạn là Gia sư AI và Giám khảo học thuật.
+ 
+Thực hiện:
+1. Kiểm tra dữ liệu đầu vào.
+2. Đánh giá mức độ hiểu bài.
+3. Chấm điểm Rubric (0-20).
+4. Chỉ ra lỗi và phần còn thiếu.
+5. Đưa ra gợi ý cải thiện.
+6. Viết lại theo phương pháp Feynman.
+ 
+Nếu thiếu dữ liệu thì báo lỗi và dừng.
+3. Kết quả chạy thử
+
+Input:
+
+Plain Text
+Machine Learning là cách máy tính học từ dữ liệu để dự đoán kết quả.
+
+Output:
+
+Plain Text
+Mức độ hiểu: Tốt
+ 
+Điểm: 13/20
+ 
+Lỗi:
+- Thiếu ví dụ thực tế.
+- Chưa giải thích quá trình huấn luyện.
+ 
+Feynman:
+Machine Learning giống như dạy trẻ em nhận biết mèo và chó bằng nhiều hình ảnh. Sau khi học đủ dữ liệu, máy tính có thể dự đoán dữ liệu mới.
