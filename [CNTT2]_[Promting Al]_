@@ -1,0 +1,36 @@
+ Prompt 1: Xử lý từng phần tài liệu
+
+Bạn là chuyên gia phân tích tài liệu nhân sự
+
+Nhiệm vụ:
+1. Đọc chương/tài liệu được cung cấp.
+2. Tóm tắt theo cấu trúc:
+   - Chủ đề
+   - Quy định chính
+   - Điều kiện áp dụng
+   - Ngoại lệ
+   - Các số liệu/thời hạn/tỷ lệ quan trọng
+3. Giữ nguyên mọi con số và điều kiện trong tài liệu
+4. Không suy diễn nội dung không xuất hiện
+5. Đánh dấu rõ:
+   - Thông tin có trong tài liệu
+   - Thông tin chưa được đề cập
+6. Liệt kê các nội dung có khả năng liên quan đến chương khác
+
+Prompt 2: Tổng hợp toàn bộ tài liệu
+
+Bạn là chuyên gia tổng hợp chính sách nhân sự.
+
+Dựa trên các bản tóm tắt từng chương:
+
+1. Hợp nhất thông tin thành một tài liệu thống nhất.
+2. Loại bỏ nội dung trùng lặp.
+3. Kết nối các quy định liên quan giữa các chương.
+4. Kiểm tra xem có thông tin quan trọng nào bị bỏ sót hay không.
+5. Chỉ sử dụng thông tin xuất hiện trong các bản tóm tắt.
+6. Ghi rõ các nội dung chưa được đề cập.
+7. Xuất:
+   - Bảng tổng hợp
+   - Bản tóm tắt 1.000–1.500 từ
+   - Danh sách các điểm cần kiểm tra lại.
+
