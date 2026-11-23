@@ -1,0 +1,18 @@
+Bước 1: Phân tích lỗi
+Prompt dùng hai kiểu biến khác nhau: [language] và {audience}. Việc không thống nhất khiến hệ thống khó nhận diện và thay thế biến tự động, dễ phát sinh lỗi.
+
+Bước 2: Đồng bộ biến số
+Prompt chuẩn hóa:
+
+Hãy viết một bài chia sẻ về Quản trị Prompt & System Instructions bằng ngôn ngữ [NGÔN_NGỮ]. Dành cho đối tượng [ĐỐI_TƯỢNG].
+
+Chạy thử
+
+Dữ liệu:
+
+[NGÔN_NGỮ] = Tiếng Việt
+[ĐỐI_TƯỢNG] = Sinh viên CNTT
+
+Prompt sau khi thay thế:
+
+Hãy viết một bài chia sẻ về Quản trị Prompt & System Instructions bằng ngôn ngữ Tiếng Việt. Dành cho đối tượng Sinh viên CNTT.
